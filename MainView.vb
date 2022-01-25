@@ -4,8 +4,7 @@
     End Sub
 
     Private Sub bt_add_borrow_Click(sender As Object, e As EventArgs) Handles bt_add_borrow.Click, Guna2Button7.Click
-        Dim show_at = New AddTransact
-        show_at.ShowDialog()
+        AddTransact.ShowDialog()
     End Sub
 
     Private Sub bt_close_Click(sender As Object, e As EventArgs) Handles bt_close.Click

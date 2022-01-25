@@ -41,16 +41,17 @@ Partial Class AddTransact
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.tb_user = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cb_level = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tb_sid = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.border = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.shadow = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.item_container = New System.Windows.Forms.FlowLayoutPanel()
         Me.mbox = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Me.lb_error = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -245,7 +246,7 @@ Partial Class AddTransact
         Me.bt_check.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.bt_check.DisabledState.Parent = Me.bt_check
         Me.bt_check.FillColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.bt_check.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bt_check.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.bt_check.ForeColor = System.Drawing.Color.White
         Me.bt_check.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.bt_check.HoverState.Parent = Me.bt_check
@@ -256,7 +257,7 @@ Partial Class AddTransact
         Me.bt_check.ShadowDecoration.Parent = Me.bt_check
         Me.bt_check.Size = New System.Drawing.Size(130, 33)
         Me.bt_check.TabIndex = 45
-        Me.bt_check.Text = "Check"
+        Me.bt_check.Text = "Validate/Add"
         '
         'tb_id
         '
@@ -330,24 +331,24 @@ Partial Class AddTransact
         Me.tb_user.Size = New System.Drawing.Size(206, 33)
         Me.tb_user.TabIndex = 30
         '
-        'Guna2ComboBox1
+        'cb_level
         '
-        Me.Guna2ComboBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.Guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.FocusedState.Parent = Me.Guna2ComboBox1
-        Me.Guna2ComboBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Guna2ComboBox1.HoverState.Parent = Me.Guna2ComboBox1
-        Me.Guna2ComboBox1.ItemHeight = 30
-        Me.Guna2ComboBox1.ItemsAppearance.Parent = Me.Guna2ComboBox1
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(633, 82)
-        Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Me.Guna2ComboBox1.ShadowDecoration.Parent = Me.Guna2ComboBox1
-        Me.Guna2ComboBox1.Size = New System.Drawing.Size(180, 36)
-        Me.Guna2ComboBox1.TabIndex = 36
+        Me.cb_level.BackColor = System.Drawing.Color.Transparent
+        Me.cb_level.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cb_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb_level.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cb_level.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cb_level.FocusedState.Parent = Me.cb_level
+        Me.cb_level.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.cb_level.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cb_level.HoverState.Parent = Me.cb_level
+        Me.cb_level.ItemHeight = 30
+        Me.cb_level.ItemsAppearance.Parent = Me.cb_level
+        Me.cb_level.Location = New System.Drawing.Point(633, 82)
+        Me.cb_level.Name = "cb_level"
+        Me.cb_level.ShadowDecoration.Parent = Me.cb_level
+        Me.cb_level.Size = New System.Drawing.Size(180, 36)
+        Me.cb_level.TabIndex = 36
         '
         'Label1
         '
@@ -371,29 +372,29 @@ Partial Class AddTransact
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "Name:"
         '
-        'Guna2TextBox1
+        'tb_sid
         '
-        Me.Guna2TextBox1.Animated = True
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.HoverState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(391, 85)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = ""
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(177, 33)
-        Me.Guna2TextBox1.TabIndex = 31
+        Me.tb_sid.Animated = True
+        Me.tb_sid.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tb_sid.DefaultText = ""
+        Me.tb_sid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tb_sid.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tb_sid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tb_sid.DisabledState.Parent = Me.tb_sid
+        Me.tb_sid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tb_sid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tb_sid.FocusedState.Parent = Me.tb_sid
+        Me.tb_sid.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_sid.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tb_sid.HoverState.Parent = Me.tb_sid
+        Me.tb_sid.Location = New System.Drawing.Point(391, 85)
+        Me.tb_sid.Name = "tb_sid"
+        Me.tb_sid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tb_sid.PlaceholderText = ""
+        Me.tb_sid.SelectedText = ""
+        Me.tb_sid.ShadowDecoration.Parent = Me.tb_sid
+        Me.tb_sid.Size = New System.Drawing.Size(177, 33)
+        Me.tb_sid.TabIndex = 31
         '
         'Label4
         '
@@ -433,6 +434,7 @@ Partial Class AddTransact
         Me.item_container.Location = New System.Drawing.Point(13, 261)
         Me.item_container.Margin = New System.Windows.Forms.Padding(0)
         Me.item_container.Name = "item_container"
+        Me.item_container.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.item_container.Size = New System.Drawing.Size(818, 170)
         Me.item_container.TabIndex = 50
         '
@@ -444,6 +446,19 @@ Partial Class AddTransact
         Me.mbox.Parent = Me
         Me.mbox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
         Me.mbox.Text = Nothing
+        '
+        'lb_error
+        '
+        Me.lb_error.AutoSize = True
+        Me.lb_error.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_error.ForeColor = System.Drawing.Color.Red
+        Me.lb_error.Location = New System.Drawing.Point(154, 167)
+        Me.lb_error.Name = "lb_error"
+        Me.lb_error.Size = New System.Drawing.Size(55, 18)
+        Me.lb_error.TabIndex = 44
+        Me.lb_error.Text = "$error"
+        Me.lb_error.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lb_error.Visible = False
         '
         'AddTransact
         '
@@ -463,12 +478,13 @@ Partial Class AddTransact
         Me.Controls.Add(Me.bt_check)
         Me.Controls.Add(Me.tb_id)
         Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.lb_error)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.tb_user)
-        Me.Controls.Add(Me.Guna2ComboBox1)
+        Me.Controls.Add(Me.cb_level)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Guna2TextBox1)
+        Me.Controls.Add(Me.tb_sid)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.header)
@@ -504,14 +520,15 @@ Partial Class AddTransact
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents tb_user As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cb_level As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tb_sid As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents border As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents shadow As Guna.UI2.WinForms.Guna2ShadowForm
-    Friend WithEvents item_container As FlowLayoutPanel
     Friend WithEvents mbox As Guna.UI2.WinForms.Guna2MessageDialog
+    Public WithEvents item_container As FlowLayoutPanel
+    Friend WithEvents lb_error As Label
 End Class

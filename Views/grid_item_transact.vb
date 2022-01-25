@@ -18,6 +18,7 @@
             BookISBN = _bookisbn
         End Get
         Set(value As Integer)
+            _bookisbn = value
             lb_isbn.Text = Convert.ToString(value)
         End Set
     End Property
@@ -40,11 +41,9 @@
         End Set
     End Property
 
-    Private Sub grid_item_transact_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub bt_delete_Click(sender As Object, e As EventArgs) Handles bt_delete.Click
         Parent.Controls.Remove(Me)
+        AddTransact.idlist.Remove(CStr(_bookisbn))
+        AddTransact.lb_error.Visible = False
     End Sub
 End Class

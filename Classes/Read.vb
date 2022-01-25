@@ -36,6 +36,7 @@ Public Class Read
     Public Shared Function FindBook() As Book
         cmd = New OleDbCommand("SELECT * FROM tb_bookdetails WHERE ISBN = @isbn")
         cmd.Connection = con
+        Connect()
         cmd.Parameters.AddWithValue("@isbn", _Book.ISBN)
         Dim reader As OleDbDataReader = cmd.ExecuteReader()
 
@@ -51,6 +52,7 @@ Public Class Read
         End If
         reader.Close()
         cmd.Parameters.Clear()
+        DisConnect()
         Return _Book
     End Function
 End Class
