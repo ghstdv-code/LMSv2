@@ -120,6 +120,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Create.vb" />
+    <Compile Include="Classes\DataConfig.vb" />
+    <Compile Include="Classes\Objects\Book.vb" />
+    <Compile Include="Classes\Objects\User.vb" />
+    <Compile Include="Classes\Read.vb" />
+    <Compile Include="Functions.vb" />
     <Compile Include="MainView.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>

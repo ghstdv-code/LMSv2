@@ -36,8 +36,8 @@ Partial Class AddTransact
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.bt_add_borrow = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.bt_check = New Guna.UI2.WinForms.Guna2Button()
+        Me.tb_id = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.tb_user = New Guna.UI2.WinForms.Guna2TextBox()
@@ -50,6 +50,7 @@ Partial Class AddTransact
         Me.border = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.shadow = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.item_container = New System.Windows.Forms.FlowLayoutPanel()
+        Me.mbox = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.header.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -229,64 +230,66 @@ Partial Class AddTransact
         Me.Label5.Text = "Book Name"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'bt_add_borrow
+        'bt_check
         '
-        Me.bt_add_borrow.BackColor = System.Drawing.Color.White
-        Me.bt_add_borrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.bt_add_borrow.BorderRadius = 5
-        Me.bt_add_borrow.CheckedState.Parent = Me.bt_add_borrow
-        Me.bt_add_borrow.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.bt_add_borrow.CustomImages.Parent = Me.bt_add_borrow
-        Me.bt_add_borrow.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.bt_add_borrow.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.bt_add_borrow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.bt_add_borrow.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.bt_add_borrow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.bt_add_borrow.DisabledState.Parent = Me.bt_add_borrow
-        Me.bt_add_borrow.FillColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.bt_add_borrow.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bt_add_borrow.ForeColor = System.Drawing.Color.White
-        Me.bt_add_borrow.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.bt_add_borrow.HoverState.Parent = Me.bt_add_borrow
-        Me.bt_add_borrow.Image = CType(resources.GetObject("bt_add_borrow.Image"), System.Drawing.Image)
-        Me.bt_add_borrow.Location = New System.Drawing.Point(502, 195)
-        Me.bt_add_borrow.Name = "bt_add_borrow"
-        Me.bt_add_borrow.PressedColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.bt_add_borrow.ShadowDecoration.Parent = Me.bt_add_borrow
-        Me.bt_add_borrow.Size = New System.Drawing.Size(128, 33)
-        Me.bt_add_borrow.TabIndex = 45
-        Me.bt_add_borrow.Text = "Add"
+        Me.bt_check.BackColor = System.Drawing.Color.White
+        Me.bt_check.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.bt_check.BorderRadius = 5
+        Me.bt_check.CheckedState.Parent = Me.bt_check
+        Me.bt_check.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.bt_check.CustomImages.Parent = Me.bt_check
+        Me.bt_check.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.bt_check.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.bt_check.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.bt_check.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.bt_check.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.bt_check.DisabledState.Parent = Me.bt_check
+        Me.bt_check.FillColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.bt_check.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bt_check.ForeColor = System.Drawing.Color.White
+        Me.bt_check.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.bt_check.HoverState.Parent = Me.bt_check
+        Me.bt_check.Image = CType(resources.GetObject("bt_check.Image"), System.Drawing.Image)
+        Me.bt_check.Location = New System.Drawing.Point(537, 191)
+        Me.bt_check.Name = "bt_check"
+        Me.bt_check.PressedColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.bt_check.ShadowDecoration.Parent = Me.bt_check
+        Me.bt_check.Size = New System.Drawing.Size(130, 33)
+        Me.bt_check.TabIndex = 45
+        Me.bt_check.Text = "Check"
         '
-        'Guna2TextBox3
+        'tb_id
         '
-        Me.Guna2TextBox3.Animated = True
-        Me.Guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox3.DefaultText = ""
-        Me.Guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.Parent = Me.Guna2TextBox3
-        Me.Guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.FocusedState.Parent = Me.Guna2TextBox3
-        Me.Guna2TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.HoverState.Parent = Me.Guna2TextBox3
-        Me.Guna2TextBox3.Location = New System.Drawing.Point(290, 195)
-        Me.Guna2TextBox3.Name = "Guna2TextBox3"
-        Me.Guna2TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox3.PlaceholderText = ""
-        Me.Guna2TextBox3.SelectedText = ""
-        Me.Guna2TextBox3.ShadowDecoration.Parent = Me.Guna2TextBox3
-        Me.Guna2TextBox3.Size = New System.Drawing.Size(206, 33)
-        Me.Guna2TextBox3.TabIndex = 42
+        Me.tb_id.Animated = True
+        Me.tb_id.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.tb_id.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.tb_id.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tb_id.DefaultText = ""
+        Me.tb_id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tb_id.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tb_id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tb_id.DisabledState.Parent = Me.tb_id
+        Me.tb_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tb_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tb_id.FocusedState.Parent = Me.tb_id
+        Me.tb_id.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tb_id.HoverState.Parent = Me.tb_id
+        Me.tb_id.Location = New System.Drawing.Point(274, 191)
+        Me.tb_id.Name = "tb_id"
+        Me.tb_id.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tb_id.PlaceholderText = ""
+        Me.tb_id.SelectedText = ""
+        Me.tb_id.ShadowDecoration.Parent = Me.tb_id
+        Me.tb_id.Size = New System.Drawing.Size(257, 33)
+        Me.tb_id.TabIndex = 42
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(161, 203)
+        Me.Label7.Location = New System.Drawing.Point(154, 199)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(123, 18)
         Me.Label7.TabIndex = 43
@@ -297,7 +300,7 @@ Partial Class AddTransact
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(25, 167)
+        Me.Label6.Location = New System.Drawing.Point(13, 167)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(81, 18)
         Me.Label6.TabIndex = 44
@@ -426,15 +429,27 @@ Partial Class AddTransact
         'item_container
         '
         Me.item_container.AutoScroll = True
+        Me.item_container.BackColor = System.Drawing.Color.WhiteSmoke
         Me.item_container.Location = New System.Drawing.Point(13, 261)
+        Me.item_container.Margin = New System.Windows.Forms.Padding(0)
         Me.item_container.Name = "item_container"
         Me.item_container.Size = New System.Drawing.Size(818, 170)
         Me.item_container.TabIndex = 50
+        '
+        'mbox
+        '
+        Me.mbox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        Me.mbox.Caption = Nothing
+        Me.mbox.Icon = Guna.UI2.WinForms.MessageDialogIcon.None
+        Me.mbox.Parent = Me
+        Me.mbox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
+        Me.mbox.Text = Nothing
         '
         'AddTransact
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(845, 481)
         Me.Controls.Add(Me.item_container)
         Me.Controls.Add(Me.bt_save)
@@ -445,8 +460,8 @@ Partial Class AddTransact
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.bt_add_borrow)
-        Me.Controls.Add(Me.Guna2TextBox3)
+        Me.Controls.Add(Me.bt_check)
+        Me.Controls.Add(Me.tb_id)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.tb_user)
@@ -484,8 +499,8 @@ Partial Class AddTransact
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents bt_add_borrow As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents bt_check As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents tb_id As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents tb_user As Guna.UI2.WinForms.Guna2TextBox
@@ -498,4 +513,5 @@ Partial Class AddTransact
     Friend WithEvents border As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents shadow As Guna.UI2.WinForms.Guna2ShadowForm
     Friend WithEvents item_container As FlowLayoutPanel
+    Friend WithEvents mbox As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

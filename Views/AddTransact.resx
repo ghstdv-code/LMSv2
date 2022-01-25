@@ -164,17 +164,15 @@
         hM7MBu9e6kwwDczVf9FJNT8jSZ6JusVMi2D/8AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bt_add_borrow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bt_check.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAZhJREFUSEvd
-        lc0uA1EYhltFJdi5CT+3IbUgxE9IdC8haRA3IBELCXEJLCQWXA1SET93YIFEkDie75x3Mq3OdKqpBU/y
-        JJ33+76ZaXvmTO5/45wrYhnP8Q4fpX0+w2Usqv1nMDiPD5jFPc5qLBuaC3hok+ISN3AUh+QYbuIVRhxg
-        QadJh6Z93+7cG65h6pDVsILvaOyplAwNM6HPn3xccSb0ljTziVOK66HQi7dorChuGWZWw6i7wR7FMYRL
-        vuzcBXYpriOUndNhHcT2c0X/yYLiGMLTUHMVRQ2onngBg5ItBuNEUQyhfTVjWFEDqje7gK0uo6oohvA5
-        1NyAIo+yVNTm4XAwpO5JUQzhS6i5fkUeZamozcNh0wt04ieyh9G4VhRD+Ot/crRMbWtIfHpDOfkCxN1Y
-        9Q0py7T2QVtX3DLMbIXRlAfNoDCN9rjb3lJSnAm9E/ih2UnFydCwg0Y7m922SunQlMdd3x6ItusR7JO2
-        Wr5v13ZjeZ0mG5rnsPMvnFoYtFemra5jtLt9lfb5CBexvVfmHyGX+wLVIvnhQ8pMrwAAAABJRU5ErkJg
-        gg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAASVJREFUSEvd
+        lE1KA0EUhGcpiAsx8TjBM4gg3sOfjcTgKofRjegl3AjewpX/W5/fm1cTWmLTPZJByAdFhpqqN9Npppv1
+        xMx20QW6R0+SX0/RWLG/wYAj9IlyvKNDxftB8QB9+RS4RhO0Lfm1e45n9lWrg8IYvXobzmUvwb2TiNgz
+        2pFdhvBlW+MtZWUhcxtRm8kqQ/gxOjaRlYXMXkTtQVYZwh/RsU1ZWchsRdTeZJUhPPgDBv+Luk2+kZWF
+        zF1E+23yCL20NbNj2Utw7zQibXYkuw4K6Yd2hfzj2pDSD82ZqtYPin5UdBv+G35U+JnUcaZqPZTSw87P
+        JdePw47flPq9qIWh85i9oP9KSjB0FrMXDLKS9XlIuidz2auFwb6S1b/9P9I03wDUFggEyktkAAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <metadata name="border.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -182,5 +180,8 @@
   </metadata>
   <metadata name="shadow.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>105, 17</value>
+  </metadata>
+  <metadata name="mbox.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>198, 17</value>
   </metadata>
 </root>
