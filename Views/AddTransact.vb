@@ -1,6 +1,6 @@
 ﻿Imports System.Text.RegularExpressions
 Imports LMSv2.Functions
-
+Imports Newtonsoft.Json.Linq
 
 Public Class AddTransact
 
@@ -11,6 +11,7 @@ Public Class AddTransact
 
     Private Sub AddTransact_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Reset()
+        'cb_level.DataSource = Read.ClassesList()
     End Sub
 
     Private Sub bt_check_Click(sender As Object, e As EventArgs) Handles bt_check.Click
@@ -27,6 +28,9 @@ Public Class AddTransact
                 Me.lb_error.Visible = True
                 Me.lb_error.Text = "Status: Book Already Exist!!"
             End If
+        Else
+            Me.lb_error.Visible = True
+            Me.lb_error.Text = "Status: No Input Detected!!"
         End If
     End Sub
 
@@ -37,8 +41,8 @@ Public Class AddTransact
     Sub Reset()
         idlist.Clear()
         tb_id.Clear()
-        tb_user.Clear()
-        tb_sid.Clear()
+        tb_Name.Clear()
+        tb_School_Id.Clear()
         'cb_level.SelectedIndex = 0
         lb_error.Visible = False
     End Sub

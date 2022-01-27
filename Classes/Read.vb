@@ -5,6 +5,7 @@ Public Class Read
     Inherits DataConfig
 
     Shared cmd As OleDbCommand
+    Shared reader As OleDbDataReader
     Public Shared _User As User
     Public Shared _Book As Book
 
@@ -38,7 +39,7 @@ Public Class Read
         cmd.Connection = con
         Connect()
         cmd.Parameters.AddWithValue("@isbn", _Book.ISBN)
-        Dim reader As OleDbDataReader = cmd.ExecuteReader()
+        reader = cmd.ExecuteReader()
 
         If reader.HasRows Then
             reader.Read()
@@ -51,8 +52,32 @@ Public Class Read
             _Book.Copies = reader("Copies")
         End If
         reader.Close()
+        reader = Nothing
         cmd.Parameters.Clear()
+        cmd.Dispose()
         DisConnect()
         Return _Book
+    End Function
+
+    Public Shared Function ClassesList() As List(Of String)
+        Dim classlist As New List(Of String)
+
+        cmd = New OleDbCommand("SELECT * FROM tb_classes")
+        cmd.Connection = con
+        Connect()
+
+        reader = cmd.ExecuteReader()
+
+        If reader.HasRows Then
+            While reader.Read()
+                classlist.Add(reader("Classes"))
+            End While
+        End If
+        reader.Close()
+        cmd.Parameters.Clear()
+        cmd.Dispose()
+        DisConnect()
+
+        Return classlist
     End Function
 End Class
