@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Users\Gernel_Esguerra\Downloads\default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sendpabalik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Users\Gernel_Esguerra\Documents\sendpabalik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bt_delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAM5JREFUSEvl
+        jzEOQUEURSf5JUtgDdSsgZZaVNT8JdCzBTbCQtgChaAY17xbkfHmze++k7xqzrnJuP/Ae1/iPin5nA7D
+        ynDuG75XhnN1BT/cykez2HAmDqSluFksOBMH0ljcLEaciQOpL24WPc7EgdQWN4sWZ+JAKnDPoNt44ArO
+        /AbiOSQ2Tsx1IB+lMXFgrgN5L42JHXMdyGtpTKyY60CeS2NixlwH8lAaEwPmOpC70pjoMNeB3MTdQ5bG
+        DddgngaCKe76rhUuuAmz2uHcC5xCAMYM9RJJAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

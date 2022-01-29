@@ -140,7 +140,7 @@
         4Upo9mPxHKsPjU0fjOWHxqaP+b8kyRdLHbdjorbCnwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Guna2Button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bt_booklist.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJNJREFUSEvt
         lDsKgDAQRHMALbyWCIKXt1JU9BxxshmiKBbGVSzyYIr9MBsG0ST+i7W2gnroLh1U0uYaLE2yHsdAm2u4
@@ -148,7 +148,7 @@
         I9RAOcfPgZlu5kewpJt54icYswJJEWHGuvKUFwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Guna2Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bt_booktab.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJ5JREFUSEvt
         1cEKgzAQhOEc+2zFa6EvXynSPkfcTX9BDxNxbhU/WGJwmHiRlPOptQ4xY8xRr5g7NVqEphb3vKnRCFa2
@@ -257,13 +257,19 @@
   <metadata name="border.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="Guna2Button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>28</value>
+  </metadata>
+  <data name="bt_newbook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAOJJREFUSEvt
-        lE0KwjAUhCsI4jlEr6Arr+W2uHLnSo/gxmu5E5f+rIzfa6eVWkubGBDEDwaSeXkT2jRNfhfn3ELD+BCe
-        IqdpXIpwQ1Y8yCzDDdlxIK8Sbqj0OWTVwj24oiPao7kiq1BYoVhsUV/RTzCDXhHLhmiMluiCjLXKVSh8
-        dMi0zJBtcrex7CoUyk1keUFb0b+TVYditkhTL2gbWS8cZL2HBamGXtA3yOKdu8mKC8GTPL/lCUIhuP0M
-        QiF0is6o+SvyhaAe6nwPMjTtPH9hg+o32cjrQRucUPO/6M8XSZIHS3XplrF9CB8AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAVxJREFUSEvd
+        lbtKBEEQRQdzERMFMTMyET9ARAwVwcfHLIiIZgsb+B1+heg/qCBi4AMzwQcYjreqz8zI2tPz2MwDl+2q
+        ulW1DD1M9v/I83xbepCaGNDSDTU+hv4kt/x2X0JjEwvSXTh2XEJTEnxz0rUn8vzEm9tAQxKs5p2XbjzZ
+        dgnmJFgdhYvSvRfaLMGYBGuJUkvSU6z2BzNNAmPqwdcbxtSDr44NaTMc4zCmHnx1rEnr4eg8SwNpWZo1
+        MaYemdpyLk3T1p7QWzJE49jwKfwH0pX0hi6lfR8WQ8WCISnL/V7yKs2QP/NMnJE3j0MxdteLJUfE9s9L
+        3CQIC3ZJV1CI3galbckqZ3ssJW4QhAUXpCsoNF43WT5TPquJd8IKCm0WfKV8VhMfhBVK2t1OsYKv9yOy
+        T+aLl+Mc4tsJYcCbBWHBFul+aMBpmBPlGNtkaFDxon0je9H2QjXLfgDrqDx/GNkNfQAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="bt_add_borrow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -276,6 +282,15 @@
         3CQIC3ZJV1CI3galbckqZ3ssJW4QhAUXpCsoNF43WT5TPquJd8IKCm0WfKV8VhMfhBVK2t1OsYKv9yOy
         T+aLl+Mc4tsJYcCbBWHBFul+aMBpmBPlGNtkaFDxon0je9H2QjXLfgDrqDx/GNkNfQAAAABJRU5ErkJg
         gg==
+</value>
+  </data>
+  <data name="Guna2Button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAOJJREFUSEvt
+        lE0KwjAUhCsI4jlEr6Arr+W2uHLnSo/gxmu5E5f+rIzfa6eVWkubGBDEDwaSeXkT2jRNfhfn3ELD+BCe
+        IqdpXIpwQ1Y8yCzDDdlxIK8Sbqj0OWTVwj24oiPao7kiq1BYoVhsUV/RTzCDXhHLhmiMluiCjLXKVSh8
+        dMi0zJBtcrex7CoUyk1keUFb0b+TVYditkhTL2gbWS8cZL2HBamGXtA3yOKdu8mKC8GTPL/lCUIhuP0M
+        QiF0is6o+SvyhaAe6nwPMjTtPH9hg+o32cjrQRucUPO/6M8XSZIHS3XplrF9CB8AAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="moveControl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

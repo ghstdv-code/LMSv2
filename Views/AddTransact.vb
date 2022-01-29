@@ -43,7 +43,15 @@ Public Class AddTransact
         tb_id.Clear()
         tb_Name.Clear()
         tb_School_Id.Clear()
-        'cb_level.SelectedIndex = 0
+        cb_level.SelectedIndex = 0
         lb_error.Visible = False
+    End Sub
+
+    Private Sub bt_save_Click(sender As Object, e As EventArgs) Handles bt_save.Click
+
+    End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles tb_clear.Click
+
     End Sub
 End Class

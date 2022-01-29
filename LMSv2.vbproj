@@ -153,13 +153,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Validations.vb" />
     <Compile Include="Views\AddTransact.Designer.vb">
       <DependentUpon>AddTransact.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\AddTransact.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\BookTab.Designer.vb">
+    <Compile Include="Views\BookForm.Designer.vb">
+      <DependentUpon>BookForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BookTab.designer.vb">
       <DependentUpon>BookTab.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\BookTab.vb">
@@ -169,6 +176,12 @@
       <DependentUpon>grid_item_transact.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\grid_item_transact.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\item_booklist.Designer.vb">
+      <DependentUpon>item_booklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\item_booklist.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -185,14 +198,21 @@
     <EmbeddedResource Include="Views\AddTransact.resx">
       <DependentUpon>AddTransact.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\BookForm.resx">
+      <DependentUpon>BookForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\BookTab.resx">
       <DependentUpon>BookTab.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\grid_item_transact.resx">
       <DependentUpon>grid_item_transact.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\item_booklist.resx">
+      <DependentUpon>item_booklist.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

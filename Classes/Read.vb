@@ -4,10 +4,6 @@ Imports System.Data.OleDb
 Public Class Read
     Inherits DataConfig
 
-    Shared cmd As OleDbCommand
-    Shared reader As OleDbDataReader
-    Public Shared _User As User
-    Public Shared _Book As Book
 
     'Public Shared Function FindUser() As User
     '    cmd = New MySqlCommand("SELECT * FROM `tb_user` WHERE username=@user && password=@pass")
@@ -19,7 +15,7 @@ Public Class Read
 
     '    If reader.HasRows Then
     '        reader.Read()
-    '        _User.Id = reader("id")
+    '        _User.Id = sreader("id")
     '        _User.Role = reader("role")
     '    Else
     '        Login.dialog.Text = "Username or Password Incorrect!!"

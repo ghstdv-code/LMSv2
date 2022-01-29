@@ -1,14 +1,17 @@
-﻿
-Imports System.Data.OleDb
+﻿Imports System.Data.OleDb
 
 Public Class DataConfig
+
+    Public Shared cmd As OleDbCommand
+    Public Shared reader As OleDbDataReader
+    Public Shared _User As User
+    Public Shared _Book As Book
     Protected Shared ReadOnly con As OleDbConnection = New OleDbConnection($"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath}\lms_db.mdb")
     Shared Function Connect() As Boolean
         Try
             con.Open()
             Return True
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
+        Catch
         End Try
         Return False
     End Function
@@ -17,8 +20,7 @@ Public Class DataConfig
         Try
             con.Close()
             Return True
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
+        Catch
         End Try
         Return False
     End Function

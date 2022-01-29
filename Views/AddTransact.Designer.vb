@@ -22,14 +22,13 @@ Partial Class AddTransact
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddTransact))
         Me.header = New System.Windows.Forms.Panel()
         Me.bt_close = New Guna.UI2.WinForms.Guna2Button()
         Me.lb_title = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.bt_save = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
+        Me.tb_clear = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -45,10 +44,7 @@ Partial Class AddTransact
         Me.tb_School_Id = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.border = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.shadow = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.item_container = New System.Windows.Forms.FlowLayoutPanel()
-        Me.mbox = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.lb_error = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tb_Name = New Guna.UI2.WinForms.Guna2TextBox()
@@ -141,28 +137,28 @@ Partial Class AddTransact
         Me.bt_save.TabIndex = 49
         Me.bt_save.Text = "Save"
         '
-        'Guna2Button3
+        'tb_clear
         '
-        Me.Guna2Button3.BorderRadius = 5
-        Me.Guna2Button3.CheckedState.Parent = Me.Guna2Button3
-        Me.Guna2Button3.CustomImages.Parent = Me.Guna2Button3
-        Me.Guna2Button3.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button3.DisabledState.Parent = Me.Guna2Button3
-        Me.Guna2Button3.FillColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button3.HoverState.Parent = Me.Guna2Button3
-        Me.Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), System.Drawing.Image)
-        Me.Guna2Button3.Location = New System.Drawing.Point(523, 438)
-        Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.ShadowDecoration.Parent = Me.Guna2Button3
-        Me.Guna2Button3.Size = New System.Drawing.Size(151, 33)
-        Me.Guna2Button3.TabIndex = 48
-        Me.Guna2Button3.Text = "Clear"
+        Me.tb_clear.BorderRadius = 5
+        Me.tb_clear.CheckedState.Parent = Me.tb_clear
+        Me.tb_clear.CustomImages.Parent = Me.tb_clear
+        Me.tb_clear.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.tb_clear.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.tb_clear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.tb_clear.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.tb_clear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.tb_clear.DisabledState.Parent = Me.tb_clear
+        Me.tb_clear.FillColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.tb_clear.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_clear.ForeColor = System.Drawing.Color.White
+        Me.tb_clear.HoverState.Parent = Me.tb_clear
+        Me.tb_clear.Image = CType(resources.GetObject("tb_clear.Image"), System.Drawing.Image)
+        Me.tb_clear.Location = New System.Drawing.Point(523, 438)
+        Me.tb_clear.Name = "tb_clear"
+        Me.tb_clear.ShadowDecoration.Parent = Me.tb_clear
+        Me.tb_clear.Size = New System.Drawing.Size(151, 33)
+        Me.tb_clear.TabIndex = 48
+        Me.tb_clear.Text = "Clear"
         '
         'Guna2Separator1
         '
@@ -388,15 +384,6 @@ Partial Class AddTransact
         Me.Label3.TabIndex = 32
         Me.Label3.Text = "School ID:"
         '
-        'border
-        '
-        Me.border.BorderRadius = 10
-        Me.border.TargetControl = Me
-        '
-        'shadow
-        '
-        Me.shadow.TargetForm = Me
-        '
         'item_container
         '
         Me.item_container.BackColor = System.Drawing.Color.WhiteSmoke
@@ -406,15 +393,6 @@ Partial Class AddTransact
         Me.item_container.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.item_container.Size = New System.Drawing.Size(818, 170)
         Me.item_container.TabIndex = 50
-        '
-        'mbox
-        '
-        Me.mbox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
-        Me.mbox.Caption = Nothing
-        Me.mbox.Icon = Guna.UI2.WinForms.MessageDialogIcon.None
-        Me.mbox.Parent = Me
-        Me.mbox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
-        Me.mbox.Text = Nothing
         '
         'lb_error
         '
@@ -505,7 +483,7 @@ Partial Class AddTransact
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.item_container)
         Me.Controls.Add(Me.bt_save)
-        Me.Controls.Add(Me.Guna2Button3)
+        Me.Controls.Add(Me.tb_clear)
         Me.Controls.Add(Me.Guna2Separator1)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -545,7 +523,7 @@ Partial Class AddTransact
     Friend WithEvents lb_title As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents bt_save As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents tb_clear As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -561,9 +539,6 @@ Partial Class AddTransact
     Friend WithEvents tb_School_Id As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents border As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents shadow As Guna.UI2.WinForms.Guna2ShadowForm
-    Friend WithEvents mbox As Guna.UI2.WinForms.Guna2MessageDialog
     Public WithEvents item_container As FlowLayoutPanel
     Friend WithEvents lb_error As Label
     Friend WithEvents dtp_dueDate As Guna.UI2.WinForms.Guna2DateTimePicker
