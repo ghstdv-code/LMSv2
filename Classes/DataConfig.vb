@@ -6,6 +6,8 @@ Public Class DataConfig
     Public Shared reader As OleDbDataReader
     Public Shared _User As User
     Public Shared _Book As Book
+    Public Shared _Borrower As Borrower
+    Public Shared _BorrowerInfo As BorrowerInfo
     Protected Shared ReadOnly con As OleDbConnection = New OleDbConnection($"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath}\lms_db.mdb")
     Shared Function Connect() As Boolean
         Try

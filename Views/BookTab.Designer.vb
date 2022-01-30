@@ -65,6 +65,7 @@ Partial Class BookTab
         '
         'item_container
         '
+        Me.item_container.AutoScroll = True
         Me.item_container.BackColor = System.Drawing.Color.WhiteSmoke
         Me.item_container.Location = New System.Drawing.Point(22, 123)
         Me.item_container.Margin = New System.Windows.Forms.Padding(0)
@@ -78,9 +79,9 @@ Partial Class BookTab
         Me.Label18.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label18.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(947, 99)
+        Me.Label18.Location = New System.Drawing.Point(885, 99)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(78, 25)
+        Me.Label18.Size = New System.Drawing.Size(140, 25)
         Me.Label18.TabIndex = 69
         Me.Label18.Text = "Action"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -90,9 +91,9 @@ Partial Class BookTab
         Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label16.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(785, 99)
+        Me.Label16.Location = New System.Drawing.Point(765, 99)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(162, 25)
+        Me.Label16.Size = New System.Drawing.Size(120, 25)
         Me.Label16.TabIndex = 69
         Me.Label16.Text = "Condition"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -102,7 +103,7 @@ Partial Class BookTab
         Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(715, 99)
+        Me.Label9.Location = New System.Drawing.Point(695, 99)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(70, 25)
         Me.Label9.TabIndex = 69
@@ -114,7 +115,7 @@ Partial Class BookTab
         Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label12.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(529, 99)
+        Me.Label12.Location = New System.Drawing.Point(509, 99)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(187, 25)
         Me.Label12.TabIndex = 70
@@ -126,7 +127,7 @@ Partial Class BookTab
         Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label13.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(376, 99)
+        Me.Label13.Location = New System.Drawing.Point(356, 99)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(153, 25)
         Me.Label13.TabIndex = 71
@@ -140,7 +141,7 @@ Partial Class BookTab
         Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(206, 99)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(170, 25)
+        Me.Label14.Size = New System.Drawing.Size(150, 25)
         Me.Label14.TabIndex = 72
         Me.Label14.Text = "ISBN/ID"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

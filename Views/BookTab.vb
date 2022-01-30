@@ -27,4 +27,8 @@ Public Class BookTab
         item_container.Controls.Add(item)
 
     End Sub
+
+    Private Sub BookTab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        item_container.HorizontalScroll.Visible = False
+    End Sub
 End Class

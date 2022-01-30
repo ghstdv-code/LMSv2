@@ -3,6 +3,13 @@
     Private _bookisbn As Integer
     Private _bookauthor As String
     Private _bookpubliher As String
+    Private _bookid As Integer
+
+    Public WriteOnly Property BookUID As Integer
+        Set(value As Integer)
+            _bookid = value
+        End Set
+    End Property
 
     Public Property BookName As String
         Get
@@ -43,7 +50,8 @@
 
     Private Sub bt_delete_Click(sender As Object, e As EventArgs) Handles bt_delete.Click
         Parent.Controls.Remove(Me)
-        AddTransact.idlist.Remove(CStr(_bookisbn))
+        AddTransact._isbn.Remove(CStr(_bookisbn))
+        AddTransact.idlist.Remove(AddTransact.idlist.SingleOrDefault(Function(_bookobj) _bookobj = _bookid))
         AddTransact.lb_error.Visible = False
     End Sub
 End Class

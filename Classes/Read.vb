@@ -29,7 +29,6 @@ Public Class Read
     '    Return _User
     'End Function
 
-
     Public Shared Function FindBook() As Book
         cmd = New OleDbCommand("SELECT * FROM tb_bookdetails WHERE ISBN = @isbn")
         cmd.Connection = con
@@ -39,7 +38,7 @@ Public Class Read
 
         If reader.HasRows Then
             reader.Read()
-            _Book.Id = reader("id")
+            _Book.Id = reader("ID")
             _Book.ISBN = reader("ISBN")
             _Book.BookTitle = reader("BookTitle")
             _Book.BookAuthor = reader("Author")
@@ -55,25 +54,25 @@ Public Class Read
         Return _Book
     End Function
 
-    Public Shared Function ClassesList() As List(Of String)
-        Dim classlist As New List(Of String)
-
-        cmd = New OleDbCommand("SELECT * FROM tb_classes")
+    Public Shared Function IsStudentExist() As BorrowerInfo
+        cmd = New OleDbCommand("SELECT * FROM tb_borrowers WHERE BR_SchoolID = @id")
         cmd.Connection = con
         Connect()
-
+        cmd.Parameters.AddWithValue("@id", _BorrowerInfo.BorrowerID)
         reader = cmd.ExecuteReader()
 
         If reader.HasRows Then
-            While reader.Read()
-                classlist.Add(reader("Classes"))
-            End While
+            reader.Read()
+            _BorrowerInfo.ID = reader("ID")
+            _BorrowerInfo.BorrowerID = reader("BR_SchoolID")
+            _BorrowerInfo.BorrowerName = reader("BR_FullName")
+            _BorrowerInfo.BorrowerLevel = reader("BR_Level")
         End If
         reader.Close()
+        reader = Nothing
         cmd.Parameters.Clear()
         cmd.Dispose()
         DisConnect()
-
-        Return classlist
+        Return _BorrowerInfo
     End Function
 End Class

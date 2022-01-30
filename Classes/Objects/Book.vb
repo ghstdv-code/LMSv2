@@ -4,7 +4,6 @@ Imports Microsoft.Win32.SafeHandles
 Public Class Book
     Implements IDisposable
 
-    Private disposedValue As Boolean
     Public Property Id As Integer
     Public Property ISBN As Integer
     Public Property BookTitle As String
@@ -44,7 +43,6 @@ Public Class Book
     End Sub
 #Region "TagaSira"
     Private _disposedValue As Boolean
-
     ' Instantiate a SafeHandle instance.
     Private _safeHandle As SafeHandle = New SafeFileHandle(IntPtr.Zero, True)
 

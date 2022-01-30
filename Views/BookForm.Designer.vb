@@ -25,7 +25,9 @@ Partial Class BookForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookForm))
         Me.header = New System.Windows.Forms.Panel()
+        Me.bt_close = New Guna.UI2.WinForms.Guna2Button()
         Me.lb_title = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.border = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.shadow = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.lb_error = New System.Windows.Forms.Label()
@@ -47,12 +49,10 @@ Partial Class BookForm
         Me.bt_upload = New Guna.UI2.WinForms.Guna2Button()
         Me.bt_save = New Guna.UI2.WinForms.Guna2Button()
         Me.bt_clear = New Guna.UI2.WinForms.Guna2Button()
-        Me.bt_close = New Guna.UI2.WinForms.Guna2Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.header.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tb_Copies, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.img_box, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'header
@@ -67,6 +67,33 @@ Partial Class BookForm
         Me.header.Size = New System.Drawing.Size(682, 30)
         Me.header.TabIndex = 2
         '
+        'bt_close
+        '
+        Me.bt_close.BackColor = System.Drawing.Color.Transparent
+        Me.bt_close.BackgroundImage = CType(resources.GetObject("bt_close.BackgroundImage"), System.Drawing.Image)
+        Me.bt_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.bt_close.CheckedState.Parent = Me.bt_close
+        Me.bt_close.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.bt_close.CustomImages.Parent = Me.bt_close
+        Me.bt_close.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.bt_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.bt_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.bt_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.bt_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.bt_close.DisabledState.Parent = Me.bt_close
+        Me.bt_close.FillColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.bt_close.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.bt_close.ForeColor = System.Drawing.Color.White
+        Me.bt_close.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.bt_close.HoverState.Parent = Me.bt_close
+        Me.bt_close.Image = CType(resources.GetObject("bt_close.Image"), System.Drawing.Image)
+        Me.bt_close.Location = New System.Drawing.Point(650, 0)
+        Me.bt_close.Name = "bt_close"
+        Me.bt_close.PressedColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.bt_close.ShadowDecoration.Parent = Me.bt_close
+        Me.bt_close.Size = New System.Drawing.Size(32, 30)
+        Me.bt_close.TabIndex = 2
+        '
         'lb_title
         '
         Me.lb_title.AutoSize = True
@@ -77,6 +104,16 @@ Partial Class BookForm
         Me.lb_title.Size = New System.Drawing.Size(41, 16)
         Me.lb_title.TabIndex = 1
         Me.lb_title.Text = "$title"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'border
         '
@@ -407,43 +444,6 @@ Partial Class BookForm
         Me.bt_clear.TabIndex = 91
         Me.bt_clear.Text = "Clear"
         '
-        'bt_close
-        '
-        Me.bt_close.BackColor = System.Drawing.Color.Transparent
-        Me.bt_close.BackgroundImage = CType(resources.GetObject("bt_close.BackgroundImage"), System.Drawing.Image)
-        Me.bt_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.bt_close.CheckedState.Parent = Me.bt_close
-        Me.bt_close.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.bt_close.CustomImages.Parent = Me.bt_close
-        Me.bt_close.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.bt_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.bt_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.bt_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.bt_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.bt_close.DisabledState.Parent = Me.bt_close
-        Me.bt_close.FillColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.bt_close.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.bt_close.ForeColor = System.Drawing.Color.White
-        Me.bt_close.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.bt_close.HoverState.Parent = Me.bt_close
-        Me.bt_close.Image = CType(resources.GetObject("bt_close.Image"), System.Drawing.Image)
-        Me.bt_close.Location = New System.Drawing.Point(650, 0)
-        Me.bt_close.Name = "bt_close"
-        Me.bt_close.PressedColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.bt_close.ShadowDecoration.Parent = Me.bt_close
-        Me.bt_close.Size = New System.Drawing.Size(32, 30)
-        Me.bt_close.TabIndex = 2
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'BookForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
@@ -479,9 +479,9 @@ Partial Class BookForm
         Me.Text = "BookForm"
         Me.header.ResumeLayout(False)
         Me.header.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tb_Copies, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.img_box, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -41,5 +41,9 @@ Public Class MainView
     Private Sub bt_newbook_Click(sender As Object, e As EventArgs) Handles bt_newbook.Click
         BookForm.ShowDialog()
     End Sub
+
+    Private Sub bt_return_Click(sender As Object, e As EventArgs) Handles bt_return.Click
+        ReturnBook.ShowDialog()
+    End Sub
 End Class
 

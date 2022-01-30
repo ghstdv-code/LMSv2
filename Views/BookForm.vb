@@ -81,5 +81,8 @@ Public Class BookForm
 
     Private Sub BookForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load, bt_clear.Click
         ResetLayout()
+        Me.Size = New Point(682, 386)
+        Me.border.TargetControl = Me
+        Me.shadow.TargetForm = Me
     End Sub
 End Class

@@ -127,8 +127,10 @@
     <Compile Include="Classes\DataConfig.vb" />
     <Compile Include="Classes\Objects\Book.vb" />
     <Compile Include="Classes\Objects\Borrower.vb" />
+    <Compile Include="Classes\Objects\BorrowerInfo.vb" />
     <Compile Include="Classes\Objects\User.vb" />
     <Compile Include="Classes\Read.vb" />
+    <Compile Include="Classes\Updates.vb" />
     <Compile Include="Functions.vb" />
     <Compile Include="MainView.vb">
       <SubType>Form</SubType>
@@ -184,6 +186,18 @@
     <Compile Include="Views\item_booklist.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Views\ReturnBook.Designer.vb">
+      <DependentUpon>ReturnBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReturnBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rt_grid_item.Designer.vb">
+      <DependentUpon>rt_grid_item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rt_grid_item.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainView.resx">
@@ -209,6 +223,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\item_booklist.resx">
       <DependentUpon>item_booklist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReturnBook.resx">
+      <DependentUpon>ReturnBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rt_grid_item.resx">
+      <DependentUpon>rt_grid_item.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
