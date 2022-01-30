@@ -4,6 +4,7 @@ Public Class Create
     Inherits DataConfig
 
 
+
     Public Shared Function addBook() As Boolean
         cmd = New OleDbCommand("INSERT INTO tb_bookdetails (ISBN, BookTitle, Publisher, Copies, BookCondition, Author, ImagePath) VALUES (@isbn, @booktitle, @publisher, @copies, @bookcondition, @author, @imagepath)")
         cmd.Connection = con

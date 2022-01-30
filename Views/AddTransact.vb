@@ -12,6 +12,7 @@ Public Class AddTransact
     End Sub
 
     Private Sub AddTransact_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dtp_dueDate.Value = Date.Now.AddDays(2)
         Me.Size = New Point(845, 491)
         Me.border.TargetControl = Me
         Me.shadow.TargetForm = Me
@@ -19,32 +20,7 @@ Public Class AddTransact
     End Sub
 
     Private Sub bt_check_Click(sender As Object, e As EventArgs) Handles bt_check.Click
-        If Not (String.IsNullOrEmpty(tb_id.Text) Or String.IsNullOrWhiteSpace(tb_id.Text)) Then
-            If IsBookAvailable(CInt(tb_id.Text)) Then
-                Dim record = From t_record In _isbn Where t_record = tb_id.Text
-                If Not record.Any Then
-                    If (VerifyAdd(CInt(tb_id.Text))) Then
-                        _isbn.Add(tb_id.Text)
-                    Else
-                        Me.lb_error.Visible = True
-                        Me.lb_error.Text = "Status: Book Not Found!!"
-                        Me.lb_error.ForeColor = Color.Red
-                    End If
-                Else
-                    Me.lb_error.Visible = True
-                    Me.lb_error.Text = "Status: Book Already Exist!!"
-                    Me.lb_error.ForeColor = Color.Red
-                End If
-            Else
-                Me.lb_error.Visible = True
-                Me.lb_error.Text = "Status: Out of stock"
-                Me.lb_error.ForeColor = Color.Red
-            End If
-        Else
-            Me.lb_error.Visible = True
-            Me.lb_error.Text = "Status: No Input Detected!!"
-            Me.lb_error.ForeColor = Color.Red
-        End If
+        AddBookToList(tb_id.Text)
     End Sub
 
     Private Sub tb_textchanged(sender As Object, e As EventArgs) Handles tb_id.TextChanged
@@ -73,23 +49,12 @@ Public Class AddTransact
             lb_error.ForeColor = Color.Red
             lb_error.Visible = True
         Else
-            IsExist(tb_School_Id.Text.Trim)
-            Dim borrower As New Borrower()
-            For i As SByte = 0 To idlist.Count - 1 Step 1
-                Updates.UpdateCopies("Borrow", idlist(i), _copies(i))
-                borrower.BorrowerID = tb_School_Id.Text.Trim
-                borrower.BookId = CInt(idlist(i))
-                borrower.StaffId = 1
-                borrower.IssueDate = CDate(Date.Now.ToString("dd/MM/yyyy"))
-                borrower.DueDate = CDate(dtp_dueDate.Value.ToString("dd/MM/yyyy"))
-                borrower.Remarks = "PENDING"
-                _Borrower = borrower
-                If ABorrowBook() Then
-                    lb_error.Text = "Record Successfully Added!"
-                    lb_error.ForeColor = Color.Green
-                    lb_error.Visible = True
-                End If
-            Next
+            SaveBorrow(tb_School_Id.Text.Trim)
+            If ABorrowBook() Then
+                lb_error.Text = "Record Successfully Added!"
+                lb_error.ForeColor = Color.Green
+                lb_error.Visible = True
+            End If
             Reset()
         End If
     End Sub

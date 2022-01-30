@@ -85,4 +85,5 @@ Public Class BookForm
         Me.border.TargetControl = Me
         Me.shadow.TargetForm = Me
     End Sub
+
 End Class

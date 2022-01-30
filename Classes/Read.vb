@@ -4,30 +4,36 @@ Imports System.Data.OleDb
 Public Class Read
     Inherits DataConfig
 
+    Public Shared Function ViewBooksRecords() As DataTable
+        cmd = New OleDbCommand("SELECT tb_borrow_transact.ID, tb_borrow_transact.bookid, tb_borrow_transact.studentid, tb_borrow_transact.releasedate,  tb_borrow_transact.duedate, tb_bookdetails.Copies, tb_bookdetails.ISBN, tb_bookdetails.BookCondition FROM tb_borrow_transact INNER JOIN tb_bookdetails ON tb_borrow_transact.bookid = tb_bookdetails.ID WHERE tb_borrow_transact.studentid = @scid AND tb_borrow_transact.remarks = @remarks")
+        cmd.Connection = con
+        Connect()
+        cmd.Parameters.AddWithValue("@scid", _BorrowerInfo.BorrowerID)
+        cmd.Parameters.AddWithValue("@remarks", "PENDING")
 
-    'Public Shared Function FindUser() As User
-    '    cmd = New MySqlCommand("SELECT * FROM `tb_user` WHERE username=@user && password=@pass")
-    '    cmd.Connection = con
+        Dim dt_bookReconds As New DataTable
+        dt_bookReconds.Columns.Add("BookID", GetType(Integer))
+        dt_bookReconds.Columns.Add("TransactID", GetType(Integer))
+        dt_bookReconds.Columns.Add("BookISBN", GetType(Integer))
+        dt_bookReconds.Columns.Add("BookCopies", GetType(Integer))
+        dt_bookReconds.Columns.Add("BookCondition", GetType(String))
+        dt_bookReconds.Columns.Add("IssuedDate", GetType(Date))
+        dt_bookReconds.Columns.Add("DueDate", GetType(Date))
 
-    '    cmd.Parameters.AddWithValue("@user", _User.Username)
-    '    cmd.Parameters.AddWithValue("@pass", _User.Password)
-    '    Dim reader As MySqlDataReader = cmd.ExecuteReader()
+        reader = cmd.ExecuteReader
+        If reader.HasRows Then
+            While reader.Read()
+                dt_bookReconds.Rows.Add(reader("bookid"), reader("ID"), reader("ISBN"), reader("Copies"), reader("BookCondition"), reader("releasedate"), reader("duedate"))
+            End While
+        End If
 
-    '    If reader.HasRows Then
-    '        reader.Read()
-    '        _User.Id = sreader("id")
-    '        _User.Role = reader("role")
-    '    Else
-    '        Login.dialog.Text = "Username or Password Incorrect!!"
-    '        Login.dialog.Show()
-    '        Login.tb_user.Select()
-    '    End If
-
-    '    reader.Close()
-    '    cmd.Parameters.Clear()
-
-    '    Return _User
-    'End Function
+        reader.Close()
+        reader = Nothing
+        cmd.Parameters.Clear()
+        cmd.Dispose()
+        DisConnect()
+        Return dt_bookReconds
+    End Function
 
     Public Shared Function FindBook() As Book
         cmd = New OleDbCommand("SELECT * FROM tb_bookdetails WHERE ISBN = @isbn")

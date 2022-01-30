@@ -38,6 +38,12 @@ Public Class Book
         Me.ISBN = isbn
     End Sub
 
+    Public Sub New(ByRef copies As Integer, ByRef condition As String, ByRef id As Integer)
+        Me.Id = id
+        Me.Copies = copies
+        Me.Condition = condition
+    End Sub
+
     Public Sub New()
         'default constructor
     End Sub

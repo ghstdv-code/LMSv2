@@ -1,6 +1,30 @@
 ﻿Public Class Functions
     Inherits DataConfig
 
+    Shared Function AddReturnBookList() As Boolean
+        _BorrowerInfo = New BorrowerInfo(ReturnBook.tb_studID.Text)
+        Dim r_borrower = Read.IsStudentExist
+        If Not (String.IsNullOrEmpty(r_borrower.BorrowerName) Or String.IsNullOrWhiteSpace(r_borrower.BorrowerName)) Then
+            Dim dt = Read.ViewBooksRecords
+            For i As SByte = 0 To dt.Rows.Count - 1 Step 1
+                Dim item As New rt_grid_item With {
+                   .BookID = dt.Rows(i).Item("BookID"),
+                   .TransactID = dt.Rows(i).Item("TransactID"),
+                   .BookISBN = dt.Rows(i).Item("BookISBN"),
+                   .BookCopies = dt.Rows(i).Item("BookCopies"),
+                   .BookCondition = dt.Rows(i).Item("BookCondition"),
+                   .IssueDate = dt.Rows(i).Item("IssuedDate"),
+                   .DueDate = dt.Rows(i).Item("DueDate")
+                }
+                ReturnBook.item_container.Controls.Add(item)
+            Next
+            dt.Dispose()
+            Return True
+        End If
+        _BorrowerInfo.Dispose()
+        Return False
+    End Function
+
     Shared Function IsBookAvailable(isbn As Integer ) As Boolean
         _Book = New Book(isbn)
         Using newbook = Read.FindBook
@@ -81,4 +105,49 @@
         End If
         Return False
     End Function
+
+    Shared Function AddBookToList(id As String) As Boolean
+        If Not (String.IsNullOrEmpty(id) Or String.IsNullOrWhiteSpace(id)) Then
+            If IsBookAvailable(CInt(id)) Then
+                Dim record = From t_record In AddTransact._isbn Where t_record = id
+                If Not record.Any Then
+                    If (VerifyAdd(CInt(id))) Then
+                        AddTransact._isbn.Add(id)
+                    Else
+                        AddTransact.lb_error.Visible = True
+                        AddTransact.lb_error.Text = "Status: Book Not Found!!"
+                        AddTransact.lb_error.ForeColor = Color.Red
+                    End If
+                Else
+                    AddTransact.lb_error.Visible = True
+                    AddTransact.lb_error.Text = "Status: Book Already Exist!!"
+                    AddTransact.lb_error.ForeColor = Color.Red
+                End If
+            Else
+                AddTransact.lb_error.Visible = True
+                AddTransact.lb_error.Text = "Status: Out of stock"
+                AddTransact.lb_error.ForeColor = Color.Red
+            End If
+        Else
+            AddTransact.lb_error.Visible = True
+            AddTransact.lb_error.Text = "Status: No Input Detected!!"
+            AddTransact.lb_error.ForeColor = Color.Red
+        End If
+        Return True
+    End Function
+
+    Shared Sub SaveBorrow(schoolid As String)
+        IsExist(schoolid)
+        Dim borrower As New Borrower()
+        For i As SByte = 0 To AddTransact.idlist.Count - 1 Step 1
+            Updates.UpdateCopies("Borrow", AddTransact.idlist(i), AddTransact._copies(i))
+            borrower.BorrowerID = schoolid
+            borrower.BookId = CInt(AddTransact.idlist(i))
+            borrower.StaffId = 1
+            borrower.IssueDate = CDate(Date.Now.ToString("dd/MM/yyyy"))
+            borrower.DueDate = CDate(AddTransact.dtp_dueDate.Value.ToString("dd/MM/yyyy"))
+            borrower.Remarks = "PENDING"
+            _Borrower = borrower
+        Next
+    End Sub
 End Class
