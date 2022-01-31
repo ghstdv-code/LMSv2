@@ -21,9 +21,10 @@ Public Class MainView
     End Sub
 
     Private Sub MainView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ViewSwitch(Dashboard.Instance)
     End Sub
 
-    Private Sub bt_booklist_Click(sender As Object, e As EventArgs) Handles bt_booklist.Click
+    Private Sub bt_booklist_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -45,6 +46,14 @@ Public Class MainView
 
     Private Sub bt_return_Click(sender As Object, e As EventArgs) Handles bt_return.Click
         ReturnBook.ShowDialog()
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        ViewSwitch(Dashboard.Instance)
+    End Sub
+
+    Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
+        ViewSwitch(BorrowerTab.Instance)
     End Sub
 End Class
 

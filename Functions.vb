@@ -1,6 +1,28 @@
 ﻿Public Class Functions
     Inherits DataConfig
 
+    Shared Function DisplayBorrower(_container As Panel, _mode As Read.Modes) As Boolean
+        Dim dt As New DataTable
+        Select Case _mode
+            Case Read.Modes.DirectSearch
+                dt = Read.ViewBorrower(Read.Modes.DirectSearch)
+            Case Read.Modes.SimilarSearch
+                dt = Read.ViewBorrower(Read.Modes.SimilarSearch)
+            Case Read.Modes.GenericSearch
+                dt = Read.ViewBorrower(Read.Modes.GenericSearch)
+        End Select
+
+        For i As SByte = 0 To dt.Rows.Count - 1 Step 1
+            Dim itm As New borroweritems With {
+                .BID = dt.Rows(i).Item("ID"),
+                .BSCHID = dt.Rows(i).Item("SCHID"),
+                .BName = dt.Rows(i).Item("Name"),
+                .BLevel = dt.Rows(i).Item("Level")}
+            _container.Controls.Add(itm)
+        Next
+        Return True
+    End Function
+
     Shared Function DisplayBook(_container As Panel, _mode As Read.Modes) As Boolean
         Dim dt_book As new DataTable
         Select Case _mode
@@ -14,13 +36,14 @@
 
         For i As SByte = 0 To dt_book.Rows.Count - 1 Step 1
             Dim item As New item_booklist With {
-                .SetId = dt_book.Rows(i).Item("BookID"),
+                .ID = dt_book.Rows(i).Item("BookID"),
                 .BookISBN = dt_book.Rows(i).Item("BookISBN"),
                 .BookName = dt_book.Rows(i).Item("BookTitle"),
                 .BookAuthor = dt_book.Rows(i).Item("BookAuthor"),
                 .BookPublisher = dt_book.Rows(i).Item("BookPublisher"),
                 .BookCondition = dt_book.Rows(i).Item("BookCondition"),
-                .BookCopies = dt_book.Rows(i).Item("BookCopies")}
+                .BookCopies = dt_book.Rows(i).Item("BookCopies"),
+                .BookImgPath = dt_book.Rows(i).Item("BookImage")}
             _container.Controls.Add(item)
         Next
         dt_book.Dispose()

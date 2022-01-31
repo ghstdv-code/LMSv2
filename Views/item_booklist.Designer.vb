@@ -22,6 +22,7 @@ Partial Class item_booklist
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(item_booklist))
         Me.lb_bookname = New System.Windows.Forms.Label()
         Me.lb_isbn = New System.Windows.Forms.Label()
@@ -31,6 +32,8 @@ Partial Class item_booklist
         Me.lb_condition = New System.Windows.Forms.Label()
         Me.bt_delete = New Guna.UI2.WinForms.Guna2Button()
         Me.bt_view = New Guna.UI2.WinForms.Guna2Button()
+        Me.border = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.tt = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'lb_bookname
@@ -100,12 +103,13 @@ Partial Class item_booklist
         '
         'lb_condition
         '
+        Me.lb_condition.AutoEllipsis = True
         Me.lb_condition.BackColor = System.Drawing.Color.Turquoise
         Me.lb_condition.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_condition.ForeColor = System.Drawing.Color.White
-        Me.lb_condition.Location = New System.Drawing.Point(763, 10)
+        Me.lb_condition.Location = New System.Drawing.Point(759, 6)
         Me.lb_condition.Name = "lb_condition"
-        Me.lb_condition.Size = New System.Drawing.Size(99, 20)
+        Me.lb_condition.Size = New System.Drawing.Size(105, 28)
         Me.lb_condition.TabIndex = 47
         Me.lb_condition.Text = "$condition"
         Me.lb_condition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -132,6 +136,7 @@ Partial Class item_booklist
         Me.bt_delete.ShadowDecoration.Parent = Me.bt_delete
         Me.bt_delete.Size = New System.Drawing.Size(35, 35)
         Me.bt_delete.TabIndex = 48
+        Me.tt.SetToolTip(Me.bt_delete, "Delete")
         '
         'bt_view
         '
@@ -155,6 +160,16 @@ Partial Class item_booklist
         Me.bt_view.ShadowDecoration.Parent = Me.bt_view
         Me.bt_view.Size = New System.Drawing.Size(35, 35)
         Me.bt_view.TabIndex = 48
+        Me.tt.SetToolTip(Me.bt_view, "View")
+        '
+        'border
+        '
+        Me.border.BorderRadius = 5
+        Me.border.TargetControl = Me.lb_condition
+        '
+        'tt
+        '
+        Me.tt.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
         'item_booklist
         '
@@ -185,4 +200,6 @@ Partial Class item_booklist
     Friend WithEvents lb_condition As Label
     Friend WithEvents bt_delete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents bt_view As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents tt As ToolTip
+    Friend WithEvents border As Guna.UI2.WinForms.Guna2Elipse
 End Class

@@ -25,29 +25,29 @@ Partial Class MainView
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainView))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
-        Me.bt_booklist = New Guna.UI2.WinForms.Guna2Button()
-        Me.bt_booktab = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.header = New System.Windows.Forms.Panel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.bt_close = New Guna.UI2.WinForms.Guna2Button()
         Me.border = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.moveControl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.lb_datenow = New System.Windows.Forms.Label()
         Me.clock = New System.Windows.Forms.Timer(Me.components)
         Me.mbx = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.ui_container = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Dashboard1 = New LMSv2.Dashboard()
         Me.bt_newbook = New Guna.UI2.WinForms.Guna2Button()
         Me.bt_add_borrow = New Guna.UI2.WinForms.Guna2Button()
         Me.bt_return = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.bt_close = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
+        Me.bt_booktab = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.header.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -56,7 +56,6 @@ Partial Class MainView
         Me.Panel1.Controls.Add(Me.Guna2Button3)
         Me.Panel1.Controls.Add(Me.Guna2Button6)
         Me.Panel1.Controls.Add(Me.Guna2Button5)
-        Me.Panel1.Controls.Add(Me.bt_booklist)
         Me.Panel1.Controls.Add(Me.bt_booktab)
         Me.Panel1.Controls.Add(Me.Guna2Button2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -66,121 +65,6 @@ Partial Class MainView
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(210, 720)
         Me.Panel1.TabIndex = 0
-        '
-        'Guna2Button6
-        '
-        Me.Guna2Button6.CheckedState.Parent = Me.Guna2Button6
-        Me.Guna2Button6.CustomImages.Parent = Me.Guna2Button6
-        Me.Guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button6.DisabledState.Parent = Me.Guna2Button6
-        Me.Guna2Button6.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button6.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button6.HoverState.Parent = Me.Guna2Button6
-        Me.Guna2Button6.Image = CType(resources.GetObject("Guna2Button6.Image"), System.Drawing.Image)
-        Me.Guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button6.Location = New System.Drawing.Point(0, 328)
-        Me.Guna2Button6.Name = "Guna2Button6"
-        Me.Guna2Button6.ShadowDecoration.Parent = Me.Guna2Button6
-        Me.Guna2Button6.Size = New System.Drawing.Size(210, 45)
-        Me.Guna2Button6.TabIndex = 9
-        Me.Guna2Button6.Text = "Manage Users"
-        Me.Guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'Guna2Button5
-        '
-        Me.Guna2Button5.CheckedState.Parent = Me.Guna2Button5
-        Me.Guna2Button5.CustomImages.Parent = Me.Guna2Button5
-        Me.Guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button5.DisabledState.Parent = Me.Guna2Button5
-        Me.Guna2Button5.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button5.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button5.HoverState.Parent = Me.Guna2Button5
-        Me.Guna2Button5.Image = CType(resources.GetObject("Guna2Button5.Image"), System.Drawing.Image)
-        Me.Guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button5.Location = New System.Drawing.Point(0, 277)
-        Me.Guna2Button5.Name = "Guna2Button5"
-        Me.Guna2Button5.ShadowDecoration.Parent = Me.Guna2Button5
-        Me.Guna2Button5.Size = New System.Drawing.Size(210, 45)
-        Me.Guna2Button5.TabIndex = 10
-        Me.Guna2Button5.Text = "Borrowers"
-        Me.Guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'bt_booklist
-        '
-        Me.bt_booklist.CheckedState.Parent = Me.bt_booklist
-        Me.bt_booklist.CustomImages.Parent = Me.bt_booklist
-        Me.bt_booklist.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.bt_booklist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.bt_booklist.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.bt_booklist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.bt_booklist.DisabledState.Parent = Me.bt_booklist
-        Me.bt_booklist.FillColor = System.Drawing.Color.Transparent
-        Me.bt_booklist.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bt_booklist.ForeColor = System.Drawing.Color.White
-        Me.bt_booklist.HoverState.Parent = Me.bt_booklist
-        Me.bt_booklist.Image = CType(resources.GetObject("bt_booklist.Image"), System.Drawing.Image)
-        Me.bt_booklist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.bt_booklist.Location = New System.Drawing.Point(0, 226)
-        Me.bt_booklist.Name = "bt_booklist"
-        Me.bt_booklist.ShadowDecoration.Parent = Me.bt_booklist
-        Me.bt_booklist.Size = New System.Drawing.Size(210, 45)
-        Me.bt_booklist.TabIndex = 11
-        Me.bt_booklist.Text = "Issue/Return"
-        Me.bt_booklist.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'bt_booktab
-        '
-        Me.bt_booktab.CheckedState.Parent = Me.bt_booktab
-        Me.bt_booktab.CustomImages.Parent = Me.bt_booktab
-        Me.bt_booktab.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.bt_booktab.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.bt_booktab.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.bt_booktab.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.bt_booktab.DisabledState.Parent = Me.bt_booktab
-        Me.bt_booktab.FillColor = System.Drawing.Color.Transparent
-        Me.bt_booktab.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bt_booktab.ForeColor = System.Drawing.Color.White
-        Me.bt_booktab.HoverState.Parent = Me.bt_booktab
-        Me.bt_booktab.Image = CType(resources.GetObject("bt_booktab.Image"), System.Drawing.Image)
-        Me.bt_booktab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.bt_booktab.Location = New System.Drawing.Point(0, 175)
-        Me.bt_booktab.Name = "bt_booktab"
-        Me.bt_booktab.ShadowDecoration.Parent = Me.bt_booktab
-        Me.bt_booktab.Size = New System.Drawing.Size(210, 45)
-        Me.bt_booktab.TabIndex = 12
-        Me.bt_booktab.Text = "Books"
-        Me.bt_booktab.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'Guna2Button2
-        '
-        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
-        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.DisabledState.Parent = Me.Guna2Button2
-        Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
-        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
-        Me.Guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button2.Location = New System.Drawing.Point(0, 124)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
-        Me.Guna2Button2.Size = New System.Drawing.Size(210, 45)
-        Me.Guna2Button2.TabIndex = 13
-        Me.Guna2Button2.Text = "Dashboard"
-        Me.Guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'Label1
         '
@@ -193,16 +77,6 @@ Partial Class MainView
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "LIBRARY" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "MANAGEMENT"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(48, 48)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
-        '
         'header
         '
         Me.header.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
@@ -213,60 +87,6 @@ Partial Class MainView
         Me.header.Name = "header"
         Me.header.Size = New System.Drawing.Size(1097, 40)
         Me.header.TabIndex = 1
-        '
-        'Guna2Button1
-        '
-        Me.Guna2Button1.BackColor = System.Drawing.Color.White
-        Me.Guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
-        Me.Guna2Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.DisabledState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
-        Me.Guna2Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.PressedColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Size = New System.Drawing.Size(92, 40)
-        Me.Guna2Button1.TabIndex = 3
-        Me.Guna2Button1.Text = "Admin"
-        '
-        'bt_close
-        '
-        Me.bt_close.BackColor = System.Drawing.Color.White
-        Me.bt_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.bt_close.CheckedState.Parent = Me.bt_close
-        Me.bt_close.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.bt_close.CustomImages.Parent = Me.bt_close
-        Me.bt_close.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.bt_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.bt_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.bt_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.bt_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.bt_close.DisabledState.Parent = Me.bt_close
-        Me.bt_close.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.bt_close.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bt_close.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.bt_close.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.bt_close.HoverState.Parent = Me.bt_close
-        Me.bt_close.Image = CType(resources.GetObject("bt_close.Image"), System.Drawing.Image)
-        Me.bt_close.Location = New System.Drawing.Point(1005, 0)
-        Me.bt_close.Name = "bt_close"
-        Me.bt_close.PressedColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.bt_close.ShadowDecoration.Parent = Me.bt_close
-        Me.bt_close.Size = New System.Drawing.Size(92, 40)
-        Me.bt_close.TabIndex = 4
-        Me.bt_close.Text = "Logout"
         '
         'border
         '
@@ -311,6 +131,16 @@ Partial Class MainView
         Me.ui_container.Name = "ui_container"
         Me.ui_container.Size = New System.Drawing.Size(1069, 606)
         Me.ui_container.TabIndex = 12
+        '
+        'Dashboard1
+        '
+        Me.Dashboard1.BackColor = System.Drawing.Color.White
+        Me.Dashboard1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Dashboard1.Location = New System.Drawing.Point(0, 0)
+        Me.Dashboard1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Dashboard1.Name = "Dashboard1"
+        Me.Dashboard1.Size = New System.Drawing.Size(1069, 606)
+        Me.Dashboard1.TabIndex = 0
         '
         'bt_newbook
         '
@@ -396,6 +226,60 @@ Partial Class MainView
         Me.bt_return.TabIndex = 8
         Me.bt_return.Text = "Return Book"
         '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BackColor = System.Drawing.Color.White
+        Me.Guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
+        Me.Guna2Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.DisabledState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.Guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
+        Me.Guna2Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.PressedColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Size = New System.Drawing.Size(92, 40)
+        Me.Guna2Button1.TabIndex = 3
+        Me.Guna2Button1.Text = "Admin"
+        '
+        'bt_close
+        '
+        Me.bt_close.BackColor = System.Drawing.Color.White
+        Me.bt_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.bt_close.CheckedState.Parent = Me.bt_close
+        Me.bt_close.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.bt_close.CustomImages.Parent = Me.bt_close
+        Me.bt_close.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.bt_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.bt_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.bt_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.bt_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.bt_close.DisabledState.Parent = Me.bt_close
+        Me.bt_close.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.bt_close.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bt_close.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.bt_close.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.bt_close.HoverState.Parent = Me.bt_close
+        Me.bt_close.Image = CType(resources.GetObject("bt_close.Image"), System.Drawing.Image)
+        Me.bt_close.Location = New System.Drawing.Point(1005, 0)
+        Me.bt_close.Name = "bt_close"
+        Me.bt_close.PressedColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.bt_close.ShadowDecoration.Parent = Me.bt_close
+        Me.bt_close.Size = New System.Drawing.Size(92, 40)
+        Me.bt_close.TabIndex = 4
+        Me.bt_close.Text = "Logout"
+        '
         'Guna2Button3
         '
         Me.Guna2Button3.CheckedState.Parent = Me.Guna2Button3
@@ -411,13 +295,115 @@ Partial Class MainView
         Me.Guna2Button3.HoverState.Parent = Me.Guna2Button3
         Me.Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), System.Drawing.Image)
         Me.Guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button3.Location = New System.Drawing.Point(0, 379)
+        Me.Guna2Button3.Location = New System.Drawing.Point(0, 328)
         Me.Guna2Button3.Name = "Guna2Button3"
         Me.Guna2Button3.ShadowDecoration.Parent = Me.Guna2Button3
         Me.Guna2Button3.Size = New System.Drawing.Size(210, 45)
         Me.Guna2Button3.TabIndex = 9
         Me.Guna2Button3.Text = "Transactions"
         Me.Guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'Guna2Button6
+        '
+        Me.Guna2Button6.CheckedState.Parent = Me.Guna2Button6
+        Me.Guna2Button6.CustomImages.Parent = Me.Guna2Button6
+        Me.Guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button6.DisabledState.Parent = Me.Guna2Button6
+        Me.Guna2Button6.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button6.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button6.HoverState.Parent = Me.Guna2Button6
+        Me.Guna2Button6.Image = CType(resources.GetObject("Guna2Button6.Image"), System.Drawing.Image)
+        Me.Guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2Button6.Location = New System.Drawing.Point(0, 277)
+        Me.Guna2Button6.Name = "Guna2Button6"
+        Me.Guna2Button6.ShadowDecoration.Parent = Me.Guna2Button6
+        Me.Guna2Button6.Size = New System.Drawing.Size(210, 45)
+        Me.Guna2Button6.TabIndex = 9
+        Me.Guna2Button6.Text = "Manage Users"
+        Me.Guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'Guna2Button5
+        '
+        Me.Guna2Button5.CheckedState.Parent = Me.Guna2Button5
+        Me.Guna2Button5.CustomImages.Parent = Me.Guna2Button5
+        Me.Guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button5.DisabledState.Parent = Me.Guna2Button5
+        Me.Guna2Button5.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button5.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button5.HoverState.Parent = Me.Guna2Button5
+        Me.Guna2Button5.Image = CType(resources.GetObject("Guna2Button5.Image"), System.Drawing.Image)
+        Me.Guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2Button5.Location = New System.Drawing.Point(0, 226)
+        Me.Guna2Button5.Name = "Guna2Button5"
+        Me.Guna2Button5.ShadowDecoration.Parent = Me.Guna2Button5
+        Me.Guna2Button5.Size = New System.Drawing.Size(210, 45)
+        Me.Guna2Button5.TabIndex = 10
+        Me.Guna2Button5.Text = "Borrowers"
+        Me.Guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'bt_booktab
+        '
+        Me.bt_booktab.CheckedState.Parent = Me.bt_booktab
+        Me.bt_booktab.CustomImages.Parent = Me.bt_booktab
+        Me.bt_booktab.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.bt_booktab.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.bt_booktab.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.bt_booktab.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.bt_booktab.DisabledState.Parent = Me.bt_booktab
+        Me.bt_booktab.FillColor = System.Drawing.Color.Transparent
+        Me.bt_booktab.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bt_booktab.ForeColor = System.Drawing.Color.White
+        Me.bt_booktab.HoverState.Parent = Me.bt_booktab
+        Me.bt_booktab.Image = CType(resources.GetObject("bt_booktab.Image"), System.Drawing.Image)
+        Me.bt_booktab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.bt_booktab.Location = New System.Drawing.Point(0, 175)
+        Me.bt_booktab.Name = "bt_booktab"
+        Me.bt_booktab.ShadowDecoration.Parent = Me.bt_booktab
+        Me.bt_booktab.Size = New System.Drawing.Size(210, 45)
+        Me.bt_booktab.TabIndex = 12
+        Me.bt_booktab.Text = "Books"
+        Me.bt_booktab.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
+        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button2.DisabledState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
+        Me.Guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2Button2.Location = New System.Drawing.Point(0, 124)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Size = New System.Drawing.Size(210, 45)
+        Me.Guna2Button2.TabIndex = 13
+        Me.Guna2Button2.Text = "Dashboard"
+        Me.Guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 48)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'MainView
         '
@@ -439,8 +425,8 @@ Partial Class MainView
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.header.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -456,7 +442,6 @@ Partial Class MainView
     Friend WithEvents moveControl As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents bt_booklist As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents bt_booktab As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lb_datenow As Label
@@ -467,4 +452,5 @@ Partial Class MainView
     Friend WithEvents ui_container As FlowLayoutPanel
     Friend WithEvents bt_newbook As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Dashboard1 As Dashboard
 End Class

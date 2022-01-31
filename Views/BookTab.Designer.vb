@@ -36,6 +36,7 @@ Partial Class BookTab
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.tb_isbn = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.bt_reload = New Guna.UI2.WinForms.Guna2Button()
         Me.bt_searchfrombooklist = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2ShadowPanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -55,6 +56,7 @@ Partial Class BookTab
         Me.Guna2ShadowPanel2.Controls.Add(Me.Label10)
         Me.Guna2ShadowPanel2.Controls.Add(Me.Label11)
         Me.Guna2ShadowPanel2.Controls.Add(Me.tb_isbn)
+        Me.Guna2ShadowPanel2.Controls.Add(Me.bt_reload)
         Me.Guna2ShadowPanel2.Controls.Add(Me.bt_searchfrombooklist)
         Me.Guna2ShadowPanel2.FillColor = System.Drawing.Color.White
         Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(13, 16)
@@ -215,6 +217,34 @@ Partial Class BookTab
         Me.tb_isbn.Size = New System.Drawing.Size(206, 33)
         Me.tb_isbn.TabIndex = 59
         '
+        'bt_reload
+        '
+        Me.bt_reload.BackColor = System.Drawing.Color.White
+        Me.bt_reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.bt_reload.BorderRadius = 5
+        Me.bt_reload.CheckedState.Parent = Me.bt_reload
+        Me.bt_reload.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.bt_reload.CustomImages.Parent = Me.bt_reload
+        Me.bt_reload.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.bt_reload.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.bt_reload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.bt_reload.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.bt_reload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.bt_reload.DisabledState.Parent = Me.bt_reload
+        Me.bt_reload.FillColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.bt_reload.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bt_reload.ForeColor = System.Drawing.Color.White
+        Me.bt_reload.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.bt_reload.HoverState.Parent = Me.bt_reload
+        Me.bt_reload.Image = CType(resources.GetObject("bt_reload.Image"), System.Drawing.Image)
+        Me.bt_reload.Location = New System.Drawing.Point(877, 54)
+        Me.bt_reload.Name = "bt_reload"
+        Me.bt_reload.PressedColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.bt_reload.ShadowDecoration.Parent = Me.bt_reload
+        Me.bt_reload.Size = New System.Drawing.Size(148, 33)
+        Me.bt_reload.TabIndex = 68
+        Me.bt_reload.Text = "Reload"
+        '
         'bt_searchfrombooklist
         '
         Me.bt_searchfrombooklist.BackColor = System.Drawing.Color.White
@@ -270,4 +300,5 @@ Partial Class BookTab
     Friend WithEvents Label15 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
+    Friend WithEvents bt_reload As Guna.UI2.WinForms.Guna2Button
 End Class

@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="Classes\Create.vb" />
     <Compile Include="Classes\DataConfig.vb" />
+    <Compile Include="Classes\Delete.vb" />
     <Compile Include="Classes\Objects\Book.vb" />
     <Compile Include="Classes\Objects\Borrower.vb" />
     <Compile Include="Classes\Objects\BorrowerInfo.vb" />
@@ -174,6 +175,24 @@
     <Compile Include="Views\BookTab.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Views\borroweritems.Designer.vb">
+      <DependentUpon>borroweritems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\borroweritems.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BorrowerTab.Designer.vb">
+      <DependentUpon>BorrowerTab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BorrowerTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard.designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Views\grid_item_transact.Designer.vb">
       <DependentUpon>grid_item_transact.vb</DependentUpon>
     </Compile>
@@ -217,6 +236,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BookTab.resx">
       <DependentUpon>BookTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\borroweritems.resx">
+      <DependentUpon>borroweritems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BorrowerTab.resx">
+      <DependentUpon>BorrowerTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\grid_item_transact.resx">
       <DependentUpon>grid_item_transact.vb</DependentUpon>

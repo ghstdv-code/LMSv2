@@ -3,6 +3,48 @@
 Public Class Updates
     Inherits DataConfig
 
+    Public Shared Function UpdateBorrower() As Boolean
+        cmd = New OleDbCommand()
+        cmd.Connection = con
+        Connect()
+
+        cmd.CommandText = "UPDATE tb_borrowers SET BR_FullName = @name, BR_SchoolID = @schid, BR_Level = @level WHERE ID = @id"
+        cmd.Parameters.AddWithValue("@name", _BorrowerInfo.BorrowerName)
+        cmd.Parameters.AddWithValue("@schid", _BorrowerInfo.BorrowerID)
+        cmd.Parameters.AddWithValue("@level", _BorrowerInfo.BorrowerLevel)
+        cmd.Parameters.AddWithValue("@id", _BorrowerInfo.ID)
+        cmd.ExecuteNonQuery()
+
+        cmd.Parameters.Clear()
+        cmd.Dispose()
+        _BorrowerInfo.Dispose()
+        DisConnect()
+
+        Return True
+    End Function
+
+    Public Shared Function UpdateBookInfo() As Boolean
+        cmd = New OleDbCommand()
+        cmd.Connection = con
+        Connect()
+
+        cmd.CommandText = "UPDATE tb_bookdetails SET ISBN = @isbn, BookTitle = @title, Publisher = @publisher, Copies = @copies, BookCondition = @bcondition, Author =@author, ImagePath = @path WHERE ID = @id"
+        cmd.Parameters.AddWithValue("@isbn", _Book.ISBN)
+        cmd.Parameters.AddWithValue("@title", _Book.BookTitle)
+        cmd.Parameters.AddWithValue("@publisher", _Book.BookPublisher)
+        cmd.Parameters.AddWithValue("@copies", _Book.Copies)
+        cmd.Parameters.AddWithValue("@bcondition", _Book.Condition)
+        cmd.Parameters.AddWithValue("@author", _Book.BookAuthor)
+        cmd.Parameters.AddWithValue("@path", _Book.StringPath)
+        cmd.Parameters.AddWithValue("@id", _Book.Id)
+        cmd.ExecuteNonQuery()
+
+        cmd.Parameters.Clear()
+        cmd.Dispose()
+        _Book.Dispose()
+        DisConnect()
+        Return True
+    End Function
     Public Shared Function ReturnBook() As Boolean
         cmd = New OleDbCommand()
         cmd.Connection = con
