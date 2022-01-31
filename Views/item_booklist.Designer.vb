@@ -114,6 +114,7 @@ Partial Class item_booklist
         '
         Me.bt_delete.BorderRadius = 5
         Me.bt_delete.CheckedState.Parent = Me.bt_delete
+        Me.bt_delete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.bt_delete.CustomImages.Parent = Me.bt_delete
         Me.bt_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.bt_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -136,6 +137,7 @@ Partial Class item_booklist
         '
         Me.bt_view.BorderRadius = 5
         Me.bt_view.CheckedState.Parent = Me.bt_view
+        Me.bt_view.Cursor = System.Windows.Forms.Cursors.Hand
         Me.bt_view.CustomImages.Parent = Me.bt_view
         Me.bt_view.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.bt_view.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray

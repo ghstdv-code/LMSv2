@@ -1,6 +1,32 @@
 ﻿Public Class Functions
     Inherits DataConfig
 
+    Shared Function DisplayBook(_container As Panel, _mode As Read.Modes) As Boolean
+        Dim dt_book As new DataTable
+        Select Case _mode
+            Case Read.Modes.DirectSearch
+                dt_book = Read.FindBook(Read.Modes.DirectSearch)
+            Case Read.Modes.SimilarSearch
+                dt_book = Read.FindBook(Read.Modes.SimilarSearch)
+            Case Read.Modes.GenericSearch
+                dt_book = Read.FindBook(Read.Modes.GenericSearch)
+        End Select
+
+        For i As SByte = 0 To dt_book.Rows.Count - 1 Step 1
+            Dim item As New item_booklist With {
+                .SetId = dt_book.Rows(i).Item("BookID"),
+                .BookISBN = dt_book.Rows(i).Item("BookISBN"),
+                .BookName = dt_book.Rows(i).Item("BookTitle"),
+                .BookAuthor = dt_book.Rows(i).Item("BookAuthor"),
+                .BookPublisher = dt_book.Rows(i).Item("BookPublisher"),
+                .BookCondition = dt_book.Rows(i).Item("BookCondition"),
+                .BookCopies = dt_book.Rows(i).Item("BookCopies")}
+            _container.Controls.Add(item)
+        Next
+        dt_book.Dispose()
+        Return False
+    End Function
+
     Shared Function AddReturnBookList() As Boolean
         _BorrowerInfo = New BorrowerInfo(ReturnBook.tb_studID.Text)
         Dim r_borrower = Read.IsStudentExist
@@ -27,8 +53,8 @@
 
     Shared Function IsBookAvailable(isbn As Integer ) As Boolean
         _Book = New Book(isbn)
-        Using newbook = Read.FindBook
-            If _Book.Copies > 0 Then
+        Using newbook = Read.FindBook(Read.Modes.DirectSearch)
+            If newbook.Rows(0).Item("BookCopies") > 0 Then
                 Return True
             End If
         End Using
@@ -38,17 +64,19 @@
 
     Shared Function VerifyAdd(ByRef isbn As Integer) As Boolean
         _Book = New Book(isbn)
-        Using newbook = Read.FindBook
-            If Not (String.IsNullOrEmpty(_Book.BookTitle)) Then
-                Dim item As New grid_item_transact() With {
-                .BookISBN = newbook.ISBN,
-                .BookName = newbook.BookTitle,
-                .BookAuthor = newbook.BookAuthor,
-                .BookPublisher = newbook.BookPublisher,
-                .BookUID = newbook.Id}
-                AddTransact.item_container.Controls.Add(item)
-                AddTransact.idlist.Add(newbook.Id)
-                AddTransact._copies.Add(newbook.Copies)
+        Using dt_book = Read.FindBook(Read.Modes.DirectSearch)
+            If dt_book.Rows.Count > 0 Then
+                For i As SByte = 0 To dt_book.Rows.Count - 1 Step 1
+                    Dim item As New grid_item_transact() With {
+                    .BookISBN = dt_book.Rows(i).Item("BookISBN"),
+                    .BookName = dt_book.Rows(i).Item("BookTitle"),
+                    .BookAuthor = dt_book.Rows(i).Item("BookAuthor"),
+                    .BookPublisher = dt_book.Rows(i).Item("BookPublisher"),
+                    .BookUID = dt_book.Rows(i).Item("BookID")}
+                    AddTransact.item_container.Controls.Add(item)
+                    AddTransact.idlist.Add(dt_book.Rows(i).Item("BookID"))
+                    AddTransact._copies.Add(dt_book.Rows(i).Item("BookCopies"))
+                Next
                 Return True
             End If
         End Using
@@ -73,7 +101,7 @@
 
     Shared Function BookExist(ByRef isbn As Integer) As Boolean
         _Book = New Book(isbn)
-        Using newbook = Read.FindBook
+        Using newbook = Read.FindBook(Read.Modes.DirectSearch)
             If Not String.IsNullOrEmpty(_Book.BookTitle) Then
                 Return True
             End If
@@ -108,6 +136,7 @@
 
     Shared Function AddBookToList(id As String) As Boolean
         If Not (String.IsNullOrEmpty(id) Or String.IsNullOrWhiteSpace(id)) Then
+            MsgBox(IsBookAvailable(CInt(id)).ToString())
             If IsBookAvailable(CInt(id)) Then
                 Dim record = From t_record In AddTransact._isbn Where t_record = id
                 If Not record.Any Then

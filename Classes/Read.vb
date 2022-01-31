@@ -4,6 +4,12 @@ Imports System.Data.OleDb
 Public Class Read
     Inherits DataConfig
 
+    Enum Modes
+        DirectSearch
+        SimilarSearch
+        GenericSearch
+    End Enum
+
     Public Shared Function ViewBooksRecords() As DataTable
         cmd = New OleDbCommand("SELECT tb_borrow_transact.ID, tb_borrow_transact.bookid, tb_borrow_transact.studentid, tb_borrow_transact.releasedate,  tb_borrow_transact.duedate, tb_bookdetails.Copies, tb_bookdetails.ISBN, tb_bookdetails.BookCondition FROM tb_borrow_transact INNER JOIN tb_bookdetails ON tb_borrow_transact.bookid = tb_bookdetails.ID WHERE tb_borrow_transact.studentid = @scid AND tb_borrow_transact.remarks = @remarks")
         cmd.Connection = con
@@ -35,29 +41,46 @@ Public Class Read
         Return dt_bookReconds
     End Function
 
-    Public Shared Function FindBook() As Book
-        cmd = New OleDbCommand("SELECT * FROM tb_bookdetails WHERE ISBN = @isbn")
+    Public Shared Function FindBook(mode As Modes) As DataTable
+        cmd = New OleDbCommand()
+
+        Select Case mode
+            Case Modes.DirectSearch
+                cmd.CommandText = ("SELECT * FROM tb_bookdetails WHERE ISBN = @isbn")
+                cmd.Parameters.AddWithValue("@isbn", _Book.ISBN)
+            Case Modes.SimilarSearch
+                cmd.CommandText = ("SELECT * FROM tb_bookdetails WHERE ISBN LIKE @isbn ORDER BY ID DESC")
+                cmd.Parameters.AddWithValue("@isbn", $"%{CStr(_Book.ISBN)}%")
+            Case Modes.GenericSearch
+                cmd.CommandText = ("SELECT TOP 10 * FROM tb_bookdetails ORDER BY ID DESC")
+        End Select
+
         cmd.Connection = con
         Connect()
-        cmd.Parameters.AddWithValue("@isbn", _Book.ISBN)
+
+        Dim dt_bookReconds As New DataTable
+        dt_bookReconds.Columns.Add("BookID", GetType(Integer))
+        dt_bookReconds.Columns.Add("BookISBN", GetType(Integer))
+        dt_bookReconds.Columns.Add("BookTitle", GetType(String))
+        dt_bookReconds.Columns.Add("BookAuthor", GetType(String))
+        dt_bookReconds.Columns.Add("BookPublisher", GetType(String))
+        dt_bookReconds.Columns.Add("BookCondition", GetType(String))
+        dt_bookReconds.Columns.Add("BookCopies", GetType(Integer))
+
         reader = cmd.ExecuteReader()
 
         If reader.HasRows Then
-            reader.Read()
-            _Book.Id = reader("ID")
-            _Book.ISBN = reader("ISBN")
-            _Book.BookTitle = reader("BookTitle")
-            _Book.BookAuthor = reader("Author")
-            _Book.BookPublisher = reader("Publisher")
-            _Book.Condition = reader("BookCondition")
-            _Book.Copies = reader("Copies")
+            While reader.Read()
+                dt_bookReconds.Rows.Add(reader("ID"), reader("ISBN"), reader("BookTitle"), reader("Author"), reader("Publisher"), reader("BookCondition"), reader("Copies"))
+            End While
         End If
         reader.Close()
         reader = Nothing
         cmd.Parameters.Clear()
         cmd.Dispose()
         DisConnect()
-        Return _Book
+        '_Book.Dispose()
+        Return dt_bookReconds
     End Function
 
     Public Shared Function IsStudentExist() As BorrowerInfo

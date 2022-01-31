@@ -39,7 +39,8 @@ Public Class MainView
     End Sub
 
     Private Sub bt_newbook_Click(sender As Object, e As EventArgs) Handles bt_newbook.Click
-        BookForm.ShowDialog()
+        Dim bookform As New BookForm With {.SetTitle = "AddBook"}
+        bookform.ShowDialog()
     End Sub
 
     Private Sub bt_return_Click(sender As Object, e As EventArgs) Handles bt_return.Click

@@ -1,4 +1,4 @@
-﻿Imports System.IO
+﻿Imports LMSv2.DataConfig
 
 Public Class BookTab
 
@@ -13,22 +13,19 @@ Public Class BookTab
         End Get
     End Property
 
-
-
     Private Sub bt_searchfrombooklist_Click(sender As Object, e As EventArgs) Handles bt_searchfrombooklist.Click
-        Dim item As New item_booklist With {
-            .BookISBN = "112312",
-            .BookName = "Sulat Ni Carding",
-            .BookAuthor = "Si Carding Mismo",
-            .BookPublisher = "Kabarangay",
-            .BookCopies = 2,
-            .BookCondition = "Fine (F)"
-            }
-        item_container.Controls.Add(item)
+
+        If Not String.IsNullOrEmpty(tb_isbn.Text) Then
+            _Book = New Book(tb_isbn.Text.Trim)
+            Functions.DisplayBook(item_container, Read.Modes.SimilarSearch)
+        Else
+            Functions.DisplayBook(item_container, Read.Modes.GenericSearch)
+        End If
 
     End Sub
 
     Private Sub BookTab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         item_container.HorizontalScroll.Visible = False
+
     End Sub
 End Class

@@ -31,6 +31,7 @@
     End Sub
 
     Private Sub ReturnBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Size = New Point(845, 374)
         Me.border.TargetControl = Me
         Me.shadow.TargetForm = Me
         ResetForm()

@@ -34,6 +34,7 @@ Partial Class rt_grid_item
         '
         Me.bt_return.BorderRadius = 5
         Me.bt_return.CheckedState.Parent = Me.bt_return
+        Me.bt_return.Cursor = System.Windows.Forms.Cursors.Hand
         Me.bt_return.CustomImages.Parent = Me.bt_return
         Me.bt_return.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.bt_return.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray

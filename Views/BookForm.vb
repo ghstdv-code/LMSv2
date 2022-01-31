@@ -5,6 +5,12 @@ Public Class BookForm
     Dim ofd As New OpenFileDialog
     Dim filePath As String
 
+    Public WriteOnly Property SetTitle As String
+        Set(value As String)
+            lb_title.Text = value
+        End Set
+    End Property
+
     Private Sub bt_upload_Click(sender As Object, e As EventArgs) Handles bt_upload.Click
         ofd.Filter = "Image|*.jpg;*.jpeg;*.png"
         If ofd.ShowDialog = Windows.Forms.DialogResult.Cancel Then Exit Sub
@@ -85,5 +91,4 @@ Public Class BookForm
         Me.border.TargetControl = Me
         Me.shadow.TargetForm = Me
     End Sub
-
 End Class

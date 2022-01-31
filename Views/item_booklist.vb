@@ -5,6 +5,13 @@
     Private _bookpubliher As String
     Private _bookcopies As Integer
     Private _bookcondition As String
+    Private _bookID As Integer
+
+    Public WriteOnly Property SetId As Integer
+        Set(value As Integer)
+            _bookID = value
+        End Set
+    End Property
 
     Public Property BookName As String
         Get
@@ -57,6 +64,7 @@
             BookCondition = _bookcondition
         End Get
         Set(value As String)
+
             _bookcondition = value
             lb_condition.Text = value
         End Set
