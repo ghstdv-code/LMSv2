@@ -1,5 +1,55 @@
 ﻿Public Class Functions
     Inherits DataConfig
+    Shared Function DisplayTransactions(_con As Panel, _mode As Read.Modes) As Boolean
+        Dim dt As New DataTable
+        Select Case _mode
+            Case Read.Modes.SimilarSearch
+                dt = Read.ViewTransactions(Read.Modes.SimilarSearch)
+            Case Read.Modes.GenericSearch
+                dt = Read.ViewTransactions(Read.Modes.GenericSearch)
+        End Select
+        For i As SByte = 0 To dt.Rows.Count - 1 Step 1
+            Dim str() As String = Read.TransactConverter(dt.Rows(i).Item("BookID"), dt.Rows(i).Item("SchoolID"), dt.Rows(i).Item("StaffID"))
+            Dim itm As New transactionsitem With {
+                .TRID = dt.Rows(i).Item("ID"),
+                .TRBookID = str(0),
+                .TRSchID = str(2),
+                .TRStaff = str(1),
+                .TRIssue = dt.Rows(i).Item("IssueDate"),
+                .TRDue = dt.Rows(i).Item("Duedate"),
+                .TRStatus = dt.Rows(i).Item("Status")
+            }
+            _con.Controls.Add(itm)
+        Next
+        Return True
+    End Function
+
+    Shared Function DisplayUsers(_container As Panel, _mode As Read.Modes) As Boolean
+        Dim dt As New DataTable
+        Select Case _mode
+            Case Read.Modes.DirectSearch
+                dt = Read.ViewUser(Read.Modes.DirectSearch)
+            Case Read.Modes.SimilarSearch
+                dt = Read.ViewUser(Read.Modes.SimilarSearch)
+            Case Read.Modes.GenericSearch
+                dt = Read.ViewUser(Read.Modes.GenericSearch)
+        End Select
+
+        For i As SByte = 0 To dt.Rows.Count - 1 Step 1
+            Dim itm As New item_userdata With {
+            .ID = dt.Rows(i).Item("ID"),
+            .UserInfoName = dt.Rows(i).Item("Name"),
+            .UserInfoWork = dt.Rows(i).Item("Occupation"),
+            .UserInfoContact = dt.Rows(i).Item("Contact"),
+            .UserInfoGender = dt.Rows(i).Item("Gender"),
+            .UserInfoUserName = dt.Rows(i).Item("Username"),
+            .UserInfoPassword = dt.Rows(i).Item("Password"),
+            .UserInfoRole = dt.Rows(i).Item("Role")
+            }
+            _container.Controls.Add(itm)
+        Next
+        Return True
+    End Function
 
     Shared Function DisplayBorrower(_container As Panel, _mode As Read.Modes) As Boolean
         Dim dt As New DataTable
@@ -54,7 +104,7 @@
         _BorrowerInfo = New BorrowerInfo(ReturnBook.tb_studID.Text)
         Dim r_borrower = Read.IsStudentExist
         If Not (String.IsNullOrEmpty(r_borrower.BorrowerName) Or String.IsNullOrWhiteSpace(r_borrower.BorrowerName)) Then
-            Dim dt = Read.ViewBooksRecords
+            Dim dt = Read.ViewBooksRecords(Read.Modes.DirectSearch)
             For i As SByte = 0 To dt.Rows.Count - 1 Step 1
                 Dim item As New rt_grid_item With {
                    .BookID = dt.Rows(i).Item("BookID"),
@@ -74,12 +124,17 @@
         Return False
     End Function
 
-    Shared Function IsBookAvailable(isbn As Integer ) As Boolean
+    Shared Function IsBookAvailable(isbn As Integer) As Boolean
         _Book = New Book(isbn)
         Using newbook = Read.FindBook(Read.Modes.DirectSearch)
-            If newbook.Rows(0).Item("BookCopies") > 0 Then
-                Return True
-            End If
+            Try
+                If newbook.Rows(0).Item("BookCopies") > 0 Then
+                    Return True
+                End If
+            Catch ex As Exception
+                Return False
+            End Try
+
         End Using
         _Book.Dispose()
         Return False
@@ -159,7 +214,6 @@
 
     Shared Function AddBookToList(id As String) As Boolean
         If Not (String.IsNullOrEmpty(id) Or String.IsNullOrWhiteSpace(id)) Then
-            MsgBox(IsBookAvailable(CInt(id)).ToString())
             If IsBookAvailable(CInt(id)) Then
                 Dim record = From t_record In AddTransact._isbn Where t_record = id
                 If Not record.Any Then
@@ -188,14 +242,14 @@
         Return True
     End Function
 
-    Shared Sub SaveBorrow(schoolid As String)
+    Shared Sub SaveBorrow(schoolid As String, staffid As Integer)
         IsExist(schoolid)
         Dim borrower As New Borrower()
         For i As SByte = 0 To AddTransact.idlist.Count - 1 Step 1
             Updates.UpdateCopies("Borrow", AddTransact.idlist(i), AddTransact._copies(i))
             borrower.BorrowerID = schoolid
             borrower.BookId = CInt(AddTransact.idlist(i))
-            borrower.StaffId = 1
+            borrower.StaffId = staffid
             borrower.IssueDate = CDate(Date.Now.ToString("dd/MM/yyyy"))
             borrower.DueDate = CDate(AddTransact.dtp_dueDate.Value.ToString("dd/MM/yyyy"))
             borrower.Remarks = "PENDING"

@@ -110,7 +110,7 @@ Public Class BookForm
         tb_BookName.Clear()
         tb_Copies.Value = 0
         tb_Publisher.Clear()
-        img_box.Image = My.Resources.sendpabalik
+        img_box.Image = My.Resources._default
     End Sub
 
     Private Sub BookForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -120,13 +120,13 @@ Public Class BookForm
             tb_BookName.Text = _Book.BookTitle
             tb_Author.Text = _Book.BookAuthor
             tb_Publisher.Text = _Book.BookPublisher
-            tb_Copies.Value = CInt(_Book.Copies)
+            tb_Copies.Value = _Book.Copies
             cb_condition.Text = _Book.Condition
 
             If (_Book.StringPath <> "NotAvailable") Then
                 img_box.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory & _Book.StringPath)
             Else
-                img_box.Image = My.Resources.sendpabalik
+                img_box.Image = My.Resources._default
             End If
         Else
             ResetLayout()

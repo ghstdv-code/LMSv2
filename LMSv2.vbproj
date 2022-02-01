@@ -130,6 +130,7 @@
     <Compile Include="Classes\Objects\Borrower.vb" />
     <Compile Include="Classes\Objects\BorrowerInfo.vb" />
     <Compile Include="Classes\Objects\User.vb" />
+    <Compile Include="Classes\Objects\UserInfo.vb" />
     <Compile Include="Classes\Read.vb" />
     <Compile Include="Classes\Updates.vb" />
     <Compile Include="Functions.vb" />
@@ -205,6 +206,24 @@
     <Compile Include="Views\item_booklist.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Views\item_userdata.Designer.vb">
+      <DependentUpon>item_userdata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\item_userdata.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageUsersTab.Designer.vb">
+      <DependentUpon>ManageUsersTab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageUsersTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Views\ReturnBook.Designer.vb">
       <DependentUpon>ReturnBook.vb</DependentUpon>
     </Compile>
@@ -215,6 +234,18 @@
       <DependentUpon>rt_grid_item.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\rt_grid_item.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\transactionsitem.Designer.vb">
+      <DependentUpon>transactionsitem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\transactionsitem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TransactionTab.Designer.vb">
+      <DependentUpon>TransactionTab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransactionTab.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -252,11 +283,26 @@
     <EmbeddedResource Include="Views\item_booklist.resx">
       <DependentUpon>item_booklist.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\item_userdata.resx">
+      <DependentUpon>item_userdata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageUsersTab.resx">
+      <DependentUpon>ManageUsersTab.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ReturnBook.resx">
       <DependentUpon>ReturnBook.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rt_grid_item.resx">
       <DependentUpon>rt_grid_item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\transactionsitem.resx">
+      <DependentUpon>transactionsitem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TransactionTab.resx">
+      <DependentUpon>TransactionTab.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

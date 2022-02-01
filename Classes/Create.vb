@@ -3,6 +3,36 @@
 Public Class Create
     Inherits DataConfig
 
+    Public Shared Function AddUser() As Boolean
+        cmd = New OleDbCommand()
+        cmd.Connection = con
+        Connect()
+
+        cmd.CommandText = "INSERT INTO tb_account_info (Firstname, Lastname, Occupation, Contact, Gender) VALUES (@fname, @lname, @work, @contact, @gender)"
+        cmd.Parameters.AddWithValue("@fname", _User.FirstName)
+        cmd.Parameters.AddWithValue("@lname", _User.LastName)
+        cmd.Parameters.AddWithValue("@work", _User.Occupation)
+        cmd.Parameters.AddWithValue("@contact", _User.Contact)
+        cmd.Parameters.AddWithValue("@gender", _User.Gender)
+        cmd.ExecuteNonQuery()
+
+        Dim extcmd = New OleDbCommand("SELECT @@IDENTITY", con)
+        Dim cmdid As Integer = CInt(extcmd.ExecuteScalar)
+
+        cmd.Parameters.Clear()
+        cmd.CommandText = "INSERT INTO tb_account_creds (ac_UserID, ac_Username, ac_Password, ac_Role) VALUES (@uid, @uname, @passw, @role)"
+        cmd.Parameters.AddWithValue("@uid", cmdid)
+        cmd.Parameters.AddWithValue("@uname", _User.Username)
+        cmd.Parameters.AddWithValue("@passw", _User.Password)
+        cmd.Parameters.AddWithValue("@role", _User.Role)
+        cmd.ExecuteNonQuery()
+        cmd.Parameters.Clear()
+        cmd.Dispose()
+
+        DisConnect()
+        _User.Dispose()
+        Return True
+    End Function
 
 
     Public Shared Function addBook() As Boolean

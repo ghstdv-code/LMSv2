@@ -128,7 +128,7 @@
         aM8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Guna2Button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bt_manageuser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARNJREFUSEvt
         lT0SAUEQhYmk5DiKQLiu4xBO4u8EhMoRxJRSfhLkovF6+y12t63dnQ19Va9qpvv1GzVGqf2pBOdcF5pB
@@ -224,20 +224,6 @@
         Hr1KEtVnSU/Q2RI3Gjutn+qWv08Ni2kdTAkZGnv7/ouTqEhhwJKVGLBl1qqv/3GKHtX2MRESMSTm9n+f
         TaJDfKUPSJJMNuLkj1Rd/sctw6jbHxLX2jyM19o6yE92l1hovIG/eJDq4z+re9Fo/weSVNIMDn7GuQAA
         AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAexJREFUSEvd
-        lbtKA0EUhgPiDez0HRQvhfoSKmh2dl0UtLCy1EpsLcRGRBQV1NmJFoIEfYZ0cWaSNprE2xuIEUG8Rc8k
-        J7fd2SQGLPSHH5ZzvjPDzBnOBv63tkevW5khZxnh5w4Rt4yIB2X17ZjyzCFyRjGI/0zM5JOw0D34q6pN
-        cecY3MKy2grb4SaH8C3tYvkN9ZsaclPV4jL+AnjDU0xEkpkXQ4gEDg0+DLGUi/liRK4johc1hOEuAn9S
-        EutHpKhQMDqgci42S4NyHJFKheYibQBojs+vEPEI8kkPDz3RNp4SPu2B804i4hHkPNekTImwESmJGvxU
-        B4Oz1IoNIlYU9iHrYnNmhjhBrCRIpN1gmVOaJlfhNdcKiScv6LH/M610BpctCZrzrAEb9RMuWxIEtQ1r
-        zJor8mnyI5yMqnnkTMS6j4no3B+Pd4WseE8uBjlgMq4afZNdz/QVvLRrRzow7SvFwLNcBv6tUK99pmE7
-        0QKJmzwkdzBct6gp9nCD9P58vBnDlSobFe+UyBEM11TI4mOqBuw/KgqiplwrbAJ3vFJtQuYmLzDAfqga
-        uIFVTPlLM64TMCUXWJD3qnkVtqPtB5bsg0exCLnLIlfvuC7o13445VJTEV/XMTgBfkHDqcQRM+VUw7/M
-        P6JA4BumZsdMnBporgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bt_close.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

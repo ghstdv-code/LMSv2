@@ -56,6 +56,7 @@ Partial Class Dashboard
         Me.pbar_bad = New Guna.UI2.WinForms.Guna2CircleProgressBar()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Guna2ShadowPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2ShadowPanel2.SuspendLayout()
@@ -469,11 +470,23 @@ Partial Class Dashboard
         Me.Label11.TabIndex = 10
         Me.Label11.Text = "Book Condition"
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(14, 14)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(105, 25)
+        Me.Label13.TabIndex = 54
+        Me.Label13.Text = "Dashboard"
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Guna2ShadowPanel8)
         Me.Controls.Add(Me.Guna2ShadowPanel7)
         Me.Controls.Add(Me.Guna2ShadowPanel4)
@@ -507,6 +520,7 @@ Partial Class Dashboard
         Me.Guna2ShadowPanel8.ResumeLayout(False)
         Me.Guna2ShadowPanel8.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -543,4 +557,5 @@ Partial Class Dashboard
     Friend WithEvents lb_transactions As Label
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents lb_newbooks As Label
+    Friend WithEvents Label13 As Label
 End Class

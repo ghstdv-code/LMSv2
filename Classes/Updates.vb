@@ -3,6 +3,36 @@
 Public Class Updates
     Inherits DataConfig
 
+    Public Shared Function UpdateUser() As Boolean
+        cmd = New OleDbCommand()
+        cmd.Connection = con
+        Connect()
+
+        cmd.CommandText = "UPDATE tb_account_info SET Firstname = @fname, Lastname = @lname, Occupation = @work , Contact = @contact, Gender = @gender WHERE ID = @id"
+        cmd.Parameters.AddWithValue("@fname", _User.FirstName)
+        cmd.Parameters.AddWithValue("@lname", _User.LastName)
+        cmd.Parameters.AddWithValue("@work", _User.Occupation)
+        cmd.Parameters.AddWithValue("@contact", _User.Contact)
+        cmd.Parameters.AddWithValue("@gender", _User.Gender)
+        cmd.Parameters.AddWithValue("@id", _User.ID)
+        cmd.ExecuteNonQuery()
+        cmd.Parameters.Clear()
+
+        cmd.CommandText = "UPDATE tb_account_creds SET tb_account_creds.ac_Username = @uname, tb_account_creds.ac_Password = @passw, tb_account_creds.ac_Role = @role WHERE ac_UserID = @uid"
+        cmd.Parameters.AddWithValue("@uname", _User.Username)
+        cmd.Parameters.AddWithValue("@passw", _User.Password)
+        cmd.Parameters.AddWithValue("@role", _User.Role)
+        cmd.Parameters.AddWithValue("@uid", _User.ID)
+        cmd.ExecuteNonQuery()
+        cmd.Parameters.Clear()
+
+
+        _User.Dispose()
+        DisConnect()
+
+        Return True
+    End Function
+
     Public Shared Function UpdateBorrower() As Boolean
         cmd = New OleDbCommand()
         cmd.Connection = con

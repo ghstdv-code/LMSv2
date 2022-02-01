@@ -71,4 +71,8 @@ Public Class BorrowerTab
         CleanUp()
         lb_error.Visible = False
     End Sub
+
+    Private Sub BorrowerTab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Functions.DisplayBorrower(item_container, Read.Modes.GenericSearch)
+    End Sub
 End Class

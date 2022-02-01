@@ -7,6 +7,17 @@ Public Class AddTransact
     Public _copies As New List(Of Integer)
     Public _isbn As New List(Of String)
 
+    Private _staffid As Integer
+    Public Property StaffID As Integer
+        Get
+            StaffID = _staffid
+        End Get
+        Set(value As Integer)
+            _staffid = value
+        End Set
+    End Property
+
+
     Private Sub bt_close_Click(sender As Object, e As EventArgs) Handles bt_close.Click
         Me.Close()
     End Sub
@@ -40,7 +51,7 @@ Public Class AddTransact
     End Sub
 
     Private Sub bt_save_Click(sender As Object, e As EventArgs) Handles bt_save.Click
-        If Me.Controls.OfType(Of Guna2TextBox)().Where(Function(txt) txt.Text.Length = 0).Any Then
+        If String.IsNullOrEmpty(tb_Name.Text) Or String.IsNullOrEmpty(tb_School_Id.Text) Then
             lb_error.Text = "Please fill-up empty fields"
             lb_error.ForeColor = Color.Red
             lb_error.Visible = True
@@ -49,14 +60,15 @@ Public Class AddTransact
             lb_error.ForeColor = Color.Red
             lb_error.Visible = True
         Else
-            SaveBorrow(tb_School_Id.Text.Trim)
+            SaveBorrow(tb_School_Id.Text.Trim, _staffid)
             If ABorrowBook() Then
-                lb_error.Text = "Record Successfully Added!"
-                lb_error.ForeColor = Color.Green
-                lb_error.Visible = True
+                    lb_error.Text = "Record Successfully Added!"
+                    lb_error.ForeColor = Color.Green
+                    lb_error.Visible = True
+                End If
+                Reset()
             End If
-            Reset()
-        End If
+
     End Sub
 
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles tb_clear.Click

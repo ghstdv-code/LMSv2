@@ -1,12 +1,34 @@
 ﻿Imports Guna.UI2.WinForms
 
 Public Class MainView
-    Dim CurrentPoint As Point
+
+    Public Property UserID As Integer
+
+    Private _role As Role
+    Public Property UserRole As Role
+        Get
+            UserRole = _role
+        End Get
+        Set(value As Role)
+            _role = value
+        End Set
+    End Property
+
+    Public Enum Role
+        User
+        Admin
+    End Enum
+
+
+    Sub ResetForm()
+        ui_container.Controls.Clear()
+    End Sub
     Private Sub clock_Tick(sender As Object, e As EventArgs) Handles clock.Tick
         lb_datenow.Text = $"Date: {Date.UtcNow.AddHours(8).ToString("MMMM dd, yyyy HH:mm:ss tt")} UTC+8"
     End Sub
 
     Private Sub bt_add_borrow_Click(sender As Object, e As EventArgs) Handles bt_add_borrow.Click
+        AddTransact.StaffID = UserID
         AddTransact.ShowDialog()
     End Sub
 
@@ -17,15 +39,22 @@ Public Class MainView
         mbx.Buttons = MessageDialogButtons.YesNo
         If mbx.Show() = DialogResult.Yes Then
             Me.Close()
+            Login.Show()
         End If
     End Sub
 
     Private Sub MainView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Select Case UserRole
+            Case Role.Admin
+                bt_manageuser.Visible = True
+                bt_aacount.Text = "Administrator"
+                bt_aacount.Image = My.Resources.admin
+            Case Role.User
+                bt_manageuser.Visible = False
+                bt_aacount.Text = "User"
+                bt_aacount.Image = My.Resources.reguser
+        End Select
         ViewSwitch(Dashboard.Instance)
-    End Sub
-
-    Private Sub bt_booklist_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Sub ViewSwitch(views As UserControl)
@@ -54,6 +83,14 @@ Public Class MainView
 
     Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
         ViewSwitch(BorrowerTab.Instance)
+    End Sub
+
+    Private Sub Guna2Button6_Click(sender As Object, e As EventArgs) Handles bt_manageuser.Click
+        ViewSwitch(ManageUsersTab.Instance)
+    End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        ViewSwitch(TransactionTab.Instance)
     End Sub
 End Class
 

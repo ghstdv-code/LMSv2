@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class BookTab
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class TransactionTab
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,12 @@ Partial Class BookTab
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookTab))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransactionTab))
         Me.Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.item_container = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -36,8 +34,10 @@ Partial Class BookTab
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.tb_isbn = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.bt_reload = New Guna.UI2.WinForms.Guna2Button()
         Me.bt_searchfrombooklist = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2ShadowPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,8 +46,8 @@ Partial Class BookTab
         Me.Guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2ShadowPanel2.Controls.Add(Me.item_container)
         Me.Guna2ShadowPanel2.Controls.Add(Me.Label18)
-        Me.Guna2ShadowPanel2.Controls.Add(Me.Label16)
-        Me.Guna2ShadowPanel2.Controls.Add(Me.Label9)
+        Me.Guna2ShadowPanel2.Controls.Add(Me.Label2)
+        Me.Guna2ShadowPanel2.Controls.Add(Me.Label1)
         Me.Guna2ShadowPanel2.Controls.Add(Me.Label12)
         Me.Guna2ShadowPanel2.Controls.Add(Me.Label13)
         Me.Guna2ShadowPanel2.Controls.Add(Me.Label14)
@@ -59,11 +59,11 @@ Partial Class BookTab
         Me.Guna2ShadowPanel2.Controls.Add(Me.bt_reload)
         Me.Guna2ShadowPanel2.Controls.Add(Me.bt_searchfrombooklist)
         Me.Guna2ShadowPanel2.FillColor = System.Drawing.Color.White
-        Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(13, 16)
+        Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(12, 19)
         Me.Guna2ShadowPanel2.Name = "Guna2ShadowPanel2"
         Me.Guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black
         Me.Guna2ShadowPanel2.Size = New System.Drawing.Size(1044, 569)
-        Me.Guna2ShadowPanel2.TabIndex = 1
+        Me.Guna2ShadowPanel2.TabIndex = 2
         '
         'item_container
         '
@@ -81,47 +81,23 @@ Partial Class BookTab
         Me.Label18.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label18.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(885, 99)
+        Me.Label18.Location = New System.Drawing.Point(893, 99)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(140, 25)
+        Me.Label18.Size = New System.Drawing.Size(132, 25)
         Me.Label18.TabIndex = 69
         Me.Label18.Text = "Action"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label16
-        '
-        Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label16.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(765, 99)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(120, 25)
-        Me.Label16.TabIndex = 69
-        Me.Label16.Text = "Condition"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label9
-        '
-        Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label9.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(695, 99)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(70, 25)
-        Me.Label9.TabIndex = 69
-        Me.Label9.Text = "Copies"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label12
         '
         Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label12.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(509, 99)
+        Me.Label12.Location = New System.Drawing.Point(472, 99)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(187, 25)
+        Me.Label12.Size = New System.Drawing.Size(150, 25)
         Me.Label12.TabIndex = 70
-        Me.Label12.Text = "Publisher"
+        Me.Label12.Text = "Issued Date"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label13
@@ -129,11 +105,11 @@ Partial Class BookTab
         Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label13.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(356, 99)
+        Me.Label13.Location = New System.Drawing.Point(322, 99)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(153, 25)
+        Me.Label13.Size = New System.Drawing.Size(150, 25)
         Me.Label13.TabIndex = 71
-        Me.Label13.Text = "Author"
+        Me.Label13.Text = "Borrower"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label14
@@ -141,11 +117,11 @@ Partial Class BookTab
         Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label14.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(206, 99)
+        Me.Label14.Location = New System.Drawing.Point(172, 99)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(150, 25)
         Me.Label14.TabIndex = 72
-        Me.Label14.Text = "ISBN/ID"
+        Me.Label14.Text = "Staff"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label15
@@ -155,9 +131,9 @@ Partial Class BookTab
         Me.Label15.ForeColor = System.Drawing.Color.White
         Me.Label15.Location = New System.Drawing.Point(22, 99)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(184, 25)
+        Me.Label15.Size = New System.Drawing.Size(150, 25)
         Me.Label15.TabIndex = 73
-        Me.Label15.Text = "Book Name"
+        Me.Label15.Text = "ISBN/Book ID"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label17
@@ -167,20 +143,20 @@ Partial Class BookTab
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.Label17.Location = New System.Drawing.Point(23, 63)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(118, 18)
+        Me.Label17.Size = New System.Drawing.Size(183, 18)
         Me.Label17.TabIndex = 53
-        Me.Label17.Text = "Recent Books:"
+        Me.Label17.Text = "Transaction Transaction"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(20, 24)
+        Me.Label10.Location = New System.Drawing.Point(17, 16)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(89, 25)
+        Me.Label10.Size = New System.Drawing.Size(143, 25)
         Me.Label10.TabIndex = 53
-        Me.Label10.Text = "Book List"
+        Me.Label10.Text = "Transaction List"
         '
         'Label11
         '
@@ -216,6 +192,18 @@ Partial Class BookTab
         Me.tb_isbn.ShadowDecoration.Parent = Me.tb_isbn
         Me.tb_isbn.Size = New System.Drawing.Size(206, 33)
         Me.tb_isbn.TabIndex = 59
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(622, 99)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(150, 25)
+        Me.Label1.TabIndex = 70
+        Me.Label1.Text = "Due Date"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'bt_reload
         '
@@ -272,33 +260,47 @@ Partial Class BookTab
         Me.bt_searchfrombooklist.Size = New System.Drawing.Size(35, 33)
         Me.bt_searchfrombooklist.TabIndex = 68
         '
-        'BookTab
+        'Label2
         '
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(772, 99)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(121, 25)
+        Me.Label2.TabIndex = 70
+        Me.Label2.Text = "Status"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TransactionTab
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.Controls.Add(Me.Guna2ShadowPanel2)
         Me.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(0)
-        Me.Name = "BookTab"
+        Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Name = "TransactionTab"
         Me.Size = New System.Drawing.Size(1069, 606)
         Me.Guna2ShadowPanel2.ResumeLayout(False)
         Me.Guna2ShadowPanel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
+
     Friend WithEvents Guna2ShadowPanel2 As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents tb_isbn As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents bt_searchfrombooklist As Guna.UI2.WinForms.Guna2Button
     Public WithEvents item_container As FlowLayoutPanel
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents Label18 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents tb_isbn As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents bt_reload As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents bt_searchfrombooklist As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

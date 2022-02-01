@@ -157,6 +157,7 @@ Partial Class BookForm
         Me.tb_Copies.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tb_Copies.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.tb_Copies.Location = New System.Drawing.Point(158, 240)
+        Me.tb_Copies.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.tb_Copies.Name = "tb_Copies"
         Me.tb_Copies.ShadowDecoration.Parent = Me.tb_Copies
         Me.tb_Copies.Size = New System.Drawing.Size(206, 33)
@@ -360,6 +361,7 @@ Partial Class BookForm
         Me.img_box.BackColor = System.Drawing.Color.Transparent
         Me.img_box.BorderRadius = 10
         Me.img_box.FillColor = System.Drawing.Color.Gray
+        Me.img_box.Image = Global.LMSv2.My.Resources.Resources._default
         Me.img_box.ImageRotate = 0!
         Me.img_box.InitialImage = Nothing
         Me.img_box.Location = New System.Drawing.Point(382, 84)
