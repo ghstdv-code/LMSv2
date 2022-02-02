@@ -48,4 +48,8 @@ Public Class Login
         Me.drag.TargetControl = Me
         ResetForm()
     End Sub
+
+    Private Sub ClearError(sender As Object, e As EventArgs) Handles tb_uname.TextChanged, tb_pass.TextChanged
+
+    End Sub
 End Class

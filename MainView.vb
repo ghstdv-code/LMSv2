@@ -92,5 +92,9 @@ Public Class MainView
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
         ViewSwitch(TransactionTab.Instance)
     End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        AboutBox.ShowDialog()
+    End Sub
 End Class
 

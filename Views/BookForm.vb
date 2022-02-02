@@ -124,7 +124,12 @@ Public Class BookForm
             cb_condition.Text = _Book.Condition
 
             If (_Book.StringPath <> "NotAvailable") Then
-                img_box.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory & _Book.StringPath)
+                Try
+                    img_box.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory & _Book.StringPath)
+                Catch
+                    img_box.Image = My.Resources._default
+                End Try
+
             Else
                 img_box.Image = My.Resources._default
             End If
