@@ -24,6 +24,7 @@ Partial Class ManageUsersTab
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManageUsersTab))
         Me.Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
         Me.gradient = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.bt_update = New Guna.UI2.WinForms.Guna2Button()
@@ -57,7 +58,6 @@ Partial Class ManageUsersTab
         Me.Label11 = New System.Windows.Forms.Label()
         Me.tb_schid = New Guna.UI2.WinForms.Guna2TextBox()
         Me.bt_searchfrombooklist = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label16 = New System.Windows.Forms.Label()
         Me.Guna2ShadowPanel2.SuspendLayout()
         Me.gradient.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,6 +85,17 @@ Partial Class ManageUsersTab
         Me.Guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black
         Me.Guna2ShadowPanel2.Size = New System.Drawing.Size(1044, 569)
         Me.Guna2ShadowPanel2.TabIndex = 3
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.Label16.Location = New System.Drawing.Point(16, 18)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(133, 25)
+        Me.Label16.TabIndex = 86
+        Me.Label16.Text = "Manage Users"
         '
         'Guna2VSeparator1
         '
@@ -204,7 +215,7 @@ Partial Class ManageUsersTab
         Me.cb_role.ItemHeight = 30
         Me.cb_role.Items.AddRange(New Object() {"Admin", "User"})
         Me.cb_role.ItemsAppearance.Parent = Me.cb_role
-        Me.cb_role.Location = New System.Drawing.Point(122, 376)
+        Me.cb_role.Location = New System.Drawing.Point(122, 362)
         Me.cb_role.MaxDropDownItems = 5
         Me.cb_role.Name = "cb_role"
         Me.cb_role.ShadowDecoration.Parent = Me.cb_role
@@ -227,7 +238,7 @@ Partial Class ManageUsersTab
         Me.cb_gender.ItemHeight = 30
         Me.cb_gender.Items.AddRange(New Object() {"Male", "Female"})
         Me.cb_gender.ItemsAppearance.Parent = Me.cb_gender
-        Me.cb_gender.Location = New System.Drawing.Point(122, 239)
+        Me.cb_gender.Location = New System.Drawing.Point(122, 225)
         Me.cb_gender.MaxDropDownItems = 5
         Me.cb_gender.Name = "cb_gender"
         Me.cb_gender.ShadowDecoration.Parent = Me.cb_gender
@@ -251,7 +262,7 @@ Partial Class ManageUsersTab
         Me.tb_lname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_lname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tb_lname.HoverState.Parent = Me.tb_lname
-        Me.tb_lname.Location = New System.Drawing.Point(122, 122)
+        Me.tb_lname.Location = New System.Drawing.Point(122, 108)
         Me.tb_lname.Name = "tb_lname"
         Me.tb_lname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tb_lname.PlaceholderText = ""
@@ -276,7 +287,7 @@ Partial Class ManageUsersTab
         Me.tb_fname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_fname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tb_fname.HoverState.Parent = Me.tb_fname
-        Me.tb_fname.Location = New System.Drawing.Point(122, 84)
+        Me.tb_fname.Location = New System.Drawing.Point(122, 70)
         Me.tb_fname.Name = "tb_fname"
         Me.tb_fname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tb_fname.PlaceholderText = ""
@@ -301,7 +312,7 @@ Partial Class ManageUsersTab
         Me.tb_passw.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_passw.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tb_passw.HoverState.Parent = Me.tb_passw
-        Me.tb_passw.Location = New System.Drawing.Point(122, 337)
+        Me.tb_passw.Location = New System.Drawing.Point(122, 323)
         Me.tb_passw.Name = "tb_passw"
         Me.tb_passw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tb_passw.PlaceholderText = ""
@@ -326,7 +337,7 @@ Partial Class ManageUsersTab
         Me.tb_Contact.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_Contact.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tb_Contact.HoverState.Parent = Me.tb_Contact
-        Me.tb_Contact.Location = New System.Drawing.Point(122, 200)
+        Me.tb_Contact.Location = New System.Drawing.Point(122, 186)
         Me.tb_Contact.Name = "tb_Contact"
         Me.tb_Contact.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tb_Contact.PlaceholderText = ""
@@ -351,7 +362,7 @@ Partial Class ManageUsersTab
         Me.tb_uname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_uname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tb_uname.HoverState.Parent = Me.tb_uname
-        Me.tb_uname.Location = New System.Drawing.Point(122, 298)
+        Me.tb_uname.Location = New System.Drawing.Point(122, 284)
         Me.tb_uname.Name = "tb_uname"
         Me.tb_uname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tb_uname.PlaceholderText = ""
@@ -365,7 +376,7 @@ Partial Class ManageUsersTab
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(25, 347)
+        Me.Label10.Location = New System.Drawing.Point(25, 333)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(87, 18)
         Me.Label10.TabIndex = 47
@@ -387,7 +398,7 @@ Partial Class ManageUsersTab
         Me.tb_work.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_work.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tb_work.HoverState.Parent = Me.tb_work
-        Me.tb_work.Location = New System.Drawing.Point(122, 161)
+        Me.tb_work.Location = New System.Drawing.Point(122, 147)
         Me.tb_work.Name = "tb_work"
         Me.tb_work.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tb_work.PlaceholderText = ""
@@ -401,7 +412,7 @@ Partial Class ManageUsersTab
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(25, 210)
+        Me.Label7.Location = New System.Drawing.Point(25, 196)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(74, 18)
         Me.Label7.TabIndex = 47
@@ -412,7 +423,7 @@ Partial Class ManageUsersTab
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(25, 308)
+        Me.Label9.Location = New System.Drawing.Point(25, 294)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(91, 18)
         Me.Label9.TabIndex = 47
@@ -433,7 +444,7 @@ Partial Class ManageUsersTab
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(25, 388)
+        Me.Label12.Location = New System.Drawing.Point(25, 374)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(47, 18)
         Me.Label12.TabIndex = 50
@@ -444,7 +455,7 @@ Partial Class ManageUsersTab
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(25, 171)
+        Me.Label6.Location = New System.Drawing.Point(25, 157)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(98, 18)
         Me.Label6.TabIndex = 47
@@ -455,7 +466,7 @@ Partial Class ManageUsersTab
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(25, 251)
+        Me.Label4.Location = New System.Drawing.Point(25, 237)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(62, 18)
         Me.Label4.TabIndex = 50
@@ -477,7 +488,7 @@ Partial Class ManageUsersTab
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(25, 130)
+        Me.Label8.Location = New System.Drawing.Point(25, 116)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(95, 18)
         Me.Label8.TabIndex = 49
@@ -488,7 +499,7 @@ Partial Class ManageUsersTab
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(25, 94)
+        Me.Label3.Location = New System.Drawing.Point(25, 80)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 18)
         Me.Label3.TabIndex = 49
@@ -653,17 +664,6 @@ Partial Class ManageUsersTab
         Me.bt_searchfrombooklist.ShadowDecoration.Parent = Me.bt_searchfrombooklist
         Me.bt_searchfrombooklist.Size = New System.Drawing.Size(35, 33)
         Me.bt_searchfrombooklist.TabIndex = 68
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(16, 18)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(133, 25)
-        Me.Label16.TabIndex = 86
-        Me.Label16.Text = "Manage Users"
         '
         'ManageUsersTab
         '

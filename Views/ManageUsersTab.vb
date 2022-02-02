@@ -84,4 +84,7 @@ Public Class ManageUsersTab
         lb_error.Hide()
     End Sub
 
+    Private Sub tb_clear_Click(sender As Object, e As EventArgs) Handles tb_clear.Click
+        CleanUp()
+    End Sub
 End Class
