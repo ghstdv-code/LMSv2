@@ -85,6 +85,15 @@ Public Class ManageUsersTab
     End Sub
 
     Private Sub tb_clear_Click(sender As Object, e As EventArgs) Handles tb_clear.Click
-        CleanUp()
+        _id = -1
+        tb_fname.Clear()
+        tb_lname.Clear()
+        tb_work.Clear()
+        tb_work.Clear()
+        tb_Contact.Clear()
+        cb_gender.SelectedIndex = 0
+        tb_uname.Clear()
+        tb_passw.Clear()
+        cb_role.Text = "User"
     End Sub
 End Class
