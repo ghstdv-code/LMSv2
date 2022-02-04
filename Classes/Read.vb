@@ -265,8 +265,8 @@ Public Class Read
             While reader.Read()
                 dt.Rows.Add(
                 reader("ID"),
-                reader("BR_SchoolID"),
                 reader("BR_FullName"),
+                reader("BR_SchoolID"),
                 reader("BR_Level")
                 )
             End While
